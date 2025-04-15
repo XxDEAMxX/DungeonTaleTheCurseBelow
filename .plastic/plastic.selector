@@ -1,0 +1,4 @@
+repository "Dungeon_Tale_The_Curse_Below@xXDEAMXx@cloud"
+  path "/"
+    br "/main"
+    co "/main"
