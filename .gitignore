@@ -4,6 +4,8 @@
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
+.plastic/
+UserSettings/
 MemoryCaptures/
 *.csproj
 *.unityproj
@@ -19,3 +21,31 @@ MemoryCaptures/
 .vscode/
 .idea/
 .DS_Store
+Thumbs.db
+
+
+# Archivos generados por Unity
+*.apk
+*.unitypackage
+
+# TextMeshPro
+[Tt]extMesh*Pro/
+
+# Rider IDE (si alguien usa JetBrains Rider)
+.idea/
+*.sln.iml
+
+# Visual Studio Code local workspace config
+.vscode/*.code-workspace
+
+# Archivos de Unity Cache
+*.stacktrace
+
+# Archivos de colisiones de merge
+*.merge
+
+# Archivos de backup de Unity (algunos aparecen como .bak)
+*.bak
+
+# Unity Collaborate / Version Control (si no lo usas)
+.collabignore
