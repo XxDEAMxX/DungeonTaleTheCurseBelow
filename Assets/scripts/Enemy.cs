@@ -16,6 +16,9 @@ public class Enemy : MonoBehaviour
     private Vector2 randomDirection;
     private float wanderDuration = 2f;
     private float wanderTimer = 0f;
+    private float waitTimer = 5f;
+    private bool isWaiting = false;
+
 
     void Start()
     {   
@@ -62,32 +65,37 @@ public class Enemy : MonoBehaviour
         chooseDirection = false;
     }
 
-   void Wander()
-{
-    if (!chooseDirection)
+    void Wander()
     {
-        // Escoge una dirección aleatoria normalizada en X e Y
-        randomDirection = new Vector2(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)).normalized;
-        wanderTimer = wanderDuration;
-        chooseDirection = true;
-    }
+        if (isWaiting)
+        {
+            waitTimer -= Time.deltaTime;
+            if (waitTimer <= 0f)
+            {
+                // Empezar a moverse
+                isWaiting = false;
+                randomDirection = new Vector2(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)).normalized;
+                wanderTimer = UnityEngine.Random.Range(1f, 2f); // duración del movimiento
+            }
+            return; // No moverse mientras espera
+        }
 
-    // Mueve en esa dirección
-    transform.position += (Vector3)(randomDirection * speed * Time.deltaTime);
+        // Movimiento
+        transform.position += (Vector3)(randomDirection * speed * Time.deltaTime);
+        wanderTimer -= Time.deltaTime;
 
-    // Cuenta el tiempo para cambiar de dirección
-    wanderTimer -= Time.deltaTime;
-    if (wanderTimer <= 0f)
-    {
-        chooseDirection = false; // Cambiará dirección en la siguiente llamada
-    }
+        if (wanderTimer <= 0f)
+        {
+            // Detenerse y esperar
+            isWaiting = true;
+            waitTimer = UnityEngine.Random.Range(0.5f, 1.5f); // tiempo quieto
+        }
 
-    // Cambia a modo persecución si el jugador está cerca
-    if (isPlayerInRange(range))
-    {
-        curreState = EnemyState.Follow;
+        if (isPlayerInRange(range))
+        {
+            curreState = EnemyState.Follow;
+        }
     }
-}
 
     void Follow()
     {
