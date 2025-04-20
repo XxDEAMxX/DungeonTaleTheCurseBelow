@@ -3,23 +3,16 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public static Movement instance { get; private set; }
-    void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
     public float velocidad;
     private Rigidbody2D rb;
     private Animator animator;
     private bool getDamage = false;
     private bool isDeath = false;
     private bool animationAttack = false;
+    public GameObject bulletPrefab;
+    public float bulletSpeed;
+    public float fireDelay;
+    private float lastFire;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -31,14 +24,53 @@ public class Movement : MonoBehaviour
         if (isDeath) return;
         Attack();
         Mover();
+        preShoot();
+    }
+
+    void preShoot()
+    {
+        float shootHor = 0f;
+        float shootVer = 0f;
+
+        if (Input.GetKey(KeyCode.RightArrow)) shootHor = 1f;
+        if (Input.GetKey(KeyCode.LeftArrow)) shootHor = -1f;
+        if (Input.GetKey(KeyCode.UpArrow)) shootVer = 1f;
+        if (Input.GetKey(KeyCode.DownArrow)) shootVer = -1f;
+
+        if ((shootHor != 0 || shootVer != 0) && Time.time > lastFire + fireDelay)
+        {
+            shoot(shootHor, shootVer);
+            lastFire = Time.time;
+        }
+    }
+
+    void shoot(float x, float y)
+    {
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        Rigidbody2D rb = bullet.AddComponent<Rigidbody2D>();
+        rb.gravityScale = 0;
+
+        Vector2 direction = new Vector2(x, y).normalized;
+        rb.linearVelocity = direction * bulletSpeed;
     }
 
     void Mover()
     {
         if (getDamage) return;
-        float inputX = animationAttack ? 0 : Input.GetAxisRaw("Horizontal") ;
-        float inputY = animationAttack ? 0 : Input.GetAxisRaw("Vertical");
+
+        float inputX = 0f;
+        float inputY = 0f;
+
+        if (!animationAttack)
+        {
+            if (Input.GetKey(KeyCode.W)) inputY = 1f;
+            if (Input.GetKey(KeyCode.S)) inputY = -1f;
+            if (Input.GetKey(KeyCode.D)) inputX = 1f;
+            if (Input.GetKey(KeyCode.A)) inputX = -1f;
+        }
+
         Orientation(inputX, inputY);
+
         if (inputX != 0 || inputY != 0)
         {
             animator.SetBool("isRun", true);
@@ -86,17 +118,30 @@ public class Movement : MonoBehaviour
     }
 
     public void GetDamage(Vector2 direction)
-    {
+    {      
         if (getDamage) return;
         animator.SetBool("BlDamage", true);
         getDamage = true;
-        Vector2 force = new Vector2(direction.x, direction.y).normalized * 5f;
-        rb.AddForce(force * 5, ForceMode2D.Impulse);
+        Vector2 force = direction * 5f;;
+        rb.AddForce(force, ForceMode2D.Impulse);
     }
 
     public void Death()
     {
         animator.SetBool("BlDeath", true);
         isDeath = true;
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+    }
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

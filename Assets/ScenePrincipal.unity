@@ -2346,6 +2346,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
+  bulletPrefab: {fileID: 1277596320645335565, guid: bcd45f70e6907764ebef9e6df88e7830, type: 3}
+  bulletSpeed: 7.5
+  fireDelay: 0.5
 --- !u!95 &1969907524
 Animator:
   serializedVersion: 7
@@ -2682,6 +2685,14 @@ PrefabInstance:
     - target: {fileID: 5003813602476649722, guid: 9cc882f9b6f46e6498b34ca6b02a10f2, type: 3}
       propertyPath: m_Name
       value: Finn
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126144797540271411, guid: 9cc882f9b6f46e6498b34ca6b02a10f2, type: 3}
+      propertyPath: fireDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126144797540271411, guid: 9cc882f9b6f46e6498b34ca6b02a10f2, type: 3}
+      propertyPath: bulletSpeed
+      value: 7.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
