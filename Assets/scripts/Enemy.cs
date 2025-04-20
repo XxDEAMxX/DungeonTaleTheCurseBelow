@@ -13,6 +13,9 @@ public class Enemy : MonoBehaviour
     public float range;
     public float speed;
     private bool chooseDirection = false;
+    private Vector2 randomDirection;
+    private float wanderDuration = 2f;
+    private float wanderTimer = 0f;
 
     void Start()
     {   
@@ -59,17 +62,32 @@ public class Enemy : MonoBehaviour
         chooseDirection = false;
     }
 
-    void Wander(){
-        if (!chooseDirection)
-        {
-            chooseDirection = true;
-        }
-        transform.position += transform.right * speed * Time.deltaTime;	
-        if (isPlayerInRange(range))
-        {
-            curreState = EnemyState.Follow;
-        }
+   void Wander()
+{
+    if (!chooseDirection)
+    {
+        // Escoge una dirección aleatoria normalizada en X e Y
+        randomDirection = new Vector2(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)).normalized;
+        wanderTimer = wanderDuration;
+        chooseDirection = true;
     }
+
+    // Mueve en esa dirección
+    transform.position += (Vector3)(randomDirection * speed * Time.deltaTime);
+
+    // Cuenta el tiempo para cambiar de dirección
+    wanderTimer -= Time.deltaTime;
+    if (wanderTimer <= 0f)
+    {
+        chooseDirection = false; // Cambiará dirección en la siguiente llamada
+    }
+
+    // Cambia a modo persecución si el jugador está cerca
+    if (isPlayerInRange(range))
+    {
+        curreState = EnemyState.Follow;
+    }
+}
 
     void Follow()
     {
