@@ -72,6 +72,7 @@ public class Enemy : MonoBehaviour
             waitTimer -= Time.deltaTime;
             if (waitTimer <= 0f)
             {
+                //Todo: Random
                 // Empezar a moverse
                 isWaiting = false;
                 randomDirection = new Vector2(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)).normalized;
