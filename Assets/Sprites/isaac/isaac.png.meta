@@ -1,0 +1,4758 @@
+fileFormatVersion: 2
+guid: 64d98f0c0957556649fcf046ef45740c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9135563362665789592
+    second: isaac_0
+  - first:
+      213: -3995302596134580986
+    second: isaac_1
+  - first:
+      213: 6375001677776293147
+    second: isaac_2
+  - first:
+      213: 6131084236845948118
+    second: isaac_3
+  - first:
+      213: 3782357840009348867
+    second: isaac_4
+  - first:
+      213: -2933755121637202382
+    second: isaac_5
+  - first:
+      213: 1644994706439153787
+    second: isaac_6
+  - first:
+      213: 9100585860533427364
+    second: isaac_7
+  - first:
+      213: 2519478975439989780
+    second: isaac_8
+  - first:
+      213: 7795924986605586390
+    second: isaac_9
+  - first:
+      213: -323571080526494102
+    second: isaac_10
+  - first:
+      213: -1294372410372400983
+    second: isaac_11
+  - first:
+      213: -869334969714780156
+    second: isaac_12
+  - first:
+      213: -9108003571608368715
+    second: isaac_13
+  - first:
+      213: -2967291792290493696
+    second: isaac_14
+  - first:
+      213: -5805262850920009962
+    second: isaac_15
+  - first:
+      213: -6742389079781731431
+    second: isaac_16
+  - first:
+      213: 7387078419822005193
+    second: isaac_17
+  - first:
+      213: 6698065126881320531
+    second: isaac_18
+  - first:
+      213: 7030198368804322228
+    second: isaac_19
+  - first:
+      213: 9174109852775880552
+    second: isaac_20
+  - first:
+      213: 1641202767584644277
+    second: isaac_21
+  - first:
+      213: 4734527905769891556
+    second: isaac_22
+  - first:
+      213: 1217605899902099446
+    second: isaac_23
+  - first:
+      213: 78259349365413194
+    second: isaac_24
+  - first:
+      213: 5424708938089845087
+    second: isaac_25
+  - first:
+      213: -8221696898610689300
+    second: isaac_26
+  - first:
+      213: 4120951492104369280
+    second: isaac_27
+  - first:
+      213: -3265206884716160199
+    second: isaac_28
+  - first:
+      213: -1728647316365596871
+    second: isaac_29
+  - first:
+      213: -572603938932395756
+    second: isaac_30
+  - first:
+      213: 6463776031496684669
+    second: isaac_31
+  - first:
+      213: -8400174935369734326
+    second: isaac_32
+  - first:
+      213: -4487783036394864775
+    second: isaac_33
+  - first:
+      213: -2825354566201622998
+    second: isaac_34
+  - first:
+      213: 5845831753305784510
+    second: isaac_35
+  - first:
+      213: -2752130549057836573
+    second: isaac_36
+  - first:
+      213: 8955148686735612432
+    second: isaac_37
+  - first:
+      213: 3317809242848202334
+    second: isaac_38
+  - first:
+      213: -3963083934703763683
+    second: isaac_39
+  - first:
+      213: -4687555198890302787
+    second: isaac_40
+  - first:
+      213: 8327824914560253184
+    second: isaac_41
+  - first:
+      213: 6816464758393639363
+    second: isaac_42
+  - first:
+      213: -5788347223335499330
+    second: isaac_43
+  - first:
+      213: -4580497605160203712
+    second: isaac_44
+  - first:
+      213: 6640210085965170007
+    second: isaac_45
+  - first:
+      213: 5892256011156960661
+    second: isaac_46
+  - first:
+      213: 104757095626955611
+    second: isaac_47
+  - first:
+      213: -1601662501198129515
+    second: isaac_48
+  - first:
+      213: -4687875336354544268
+    second: isaac_49
+  - first:
+      213: 8211126008364020771
+    second: isaac_50
+  - first:
+      213: -7109340428321817060
+    second: isaac_51
+  - first:
+      213: -1969216582352645872
+    second: isaac_52
+  - first:
+      213: 6630678438330865340
+    second: isaac_53
+  - first:
+      213: 4780261388190222757
+    second: isaac_54
+  - first:
+      213: 812192915907534346
+    second: isaac_55
+  - first:
+      213: -7875303665446974991
+    second: isaac_56
+  - first:
+      213: -3740359993557115747
+    second: isaac_57
+  - first:
+      213: 1025297795171174995
+    second: isaac_58
+  - first:
+      213: 8434244245903103162
+    second: isaac_59
+  - first:
+      213: 2567801682295236904
+    second: isaac_60
+  - first:
+      213: 5647457138451686348
+    second: isaac_61
+  - first:
+      213: -7057536911470880164
+    second: isaac_62
+  - first:
+      213: -5728734056466376937
+    second: isaac_63
+  - first:
+      213: -8622886106813976508
+    second: isaac_64
+  - first:
+      213: -4983910545895239078
+    second: isaac_65
+  - first:
+      213: -121944469618766938
+    second: isaac_66
+  - first:
+      213: 8843335649016798013
+    second: isaac_67
+  - first:
+      213: 3038126215802893811
+    second: isaac_68
+  - first:
+      213: -309029357796342945
+    second: isaac_69
+  - first:
+      213: -8322304018185632867
+    second: isaac_70
+  - first:
+      213: -3846269521043475266
+    second: isaac_71
+  - first:
+      213: 6522579229700222218
+    second: isaac_72
+  - first:
+      213: 6601637235095741512
+    second: isaac_73
+  - first:
+      213: -8322522248332471616
+    second: isaac_74
+  - first:
+      213: 5129201216651682598
+    second: isaac_75
+  - first:
+      213: -1771796041089979886
+    second: isaac_76
+  - first:
+      213: 3287614091658842217
+    second: isaac_77
+  - first:
+      213: -4577928062980756088
+    second: isaac_78
+  - first:
+      213: -292044957375845898
+    second: isaac_79
+  - first:
+      213: 6241712247530749100
+    second: isaac_80
+  - first:
+      213: -4694868886472292761
+    second: isaac_81
+  - first:
+      213: 1824203021680393555
+    second: isaac_82
+  - first:
+      213: 7399425731879735655
+    second: isaac_83
+  - first:
+      213: 4082545461979927824
+    second: isaac_84
+  - first:
+      213: -6636048162940130415
+    second: isaac_85
+  - first:
+      213: 497100016672682419
+    second: isaac_86
+  - first:
+      213: -673571315903143856
+    second: isaac_87
+  - first:
+      213: 2339073297706658428
+    second: isaac_88
+  - first:
+      213: 4648723754147678616
+    second: isaac_89
+  - first:
+      213: -8268590811091966104
+    second: isaac_90
+  - first:
+      213: -5718564900977959056
+    second: isaac_91
+  - first:
+      213: -43695048261407248
+    second: isaac_92
+  - first:
+      213: 3420754861187566818
+    second: isaac_93
+  - first:
+      213: 8041375563626614379
+    second: isaac_94
+  - first:
+      213: -2835767587594842420
+    second: isaac_95
+  - first:
+      213: -2131714239970687220
+    second: isaac_96
+  - first:
+      213: 3482009939201467453
+    second: isaac_97
+  - first:
+      213: 3234906895473635814
+    second: isaac_98
+  - first:
+      213: -2758020792542790910
+    second: isaac_99
+  - first:
+      213: 6754201200360315488
+    second: isaac_100
+  - first:
+      213: -7029326730165958042
+    second: isaac_101
+  - first:
+      213: -3157543037456465126
+    second: isaac_102
+  - first:
+      213: 2134621232264901071
+    second: isaac_103
+  - first:
+      213: 11716134716188770
+    second: isaac_104
+  - first:
+      213: 7136318401765828575
+    second: isaac_105
+  - first:
+      213: 231710777367963811
+    second: isaac_106
+  - first:
+      213: -8330179636852788567
+    second: isaac_107
+  - first:
+      213: -3081783424717001616
+    second: isaac_108
+  - first:
+      213: -3102848431184870463
+    second: isaac_109
+  - first:
+      213: 4800270014345208711
+    second: isaac_110
+  - first:
+      213: 7029373305749374891
+    second: isaac_111
+  - first:
+      213: 1360789296625832296
+    second: isaac_112
+  - first:
+      213: -1499589863283204444
+    second: isaac_113
+  - first:
+      213: 519412116485379275
+    second: isaac_114
+  - first:
+      213: 8050523163193216563
+    second: isaac_115
+  - first:
+      213: 3383990117491313965
+    second: isaac_116
+  - first:
+      213: 9199749165397352292
+    second: isaac_117
+  - first:
+      213: 5247009988124682131
+    second: isaac_118
+  - first:
+      213: 8916589359242243624
+    second: isaac_119
+  - first:
+      213: -2859874778574864561
+    second: isaac_120
+  - first:
+      213: -7360301139866203573
+    second: isaac_121
+  - first:
+      213: 7859465762816698008
+    second: isaac_122
+  - first:
+      213: -2194303843380016055
+    second: isaac_123
+  - first:
+      213: -6555388296706548466
+    second: isaac_124
+  - first:
+      213: 8206425139995396128
+    second: isaac_125
+  - first:
+      213: -5088100964321893563
+    second: isaac_126
+  - first:
+      213: -9086265705148257991
+    second: isaac_127
+  - first:
+      213: 4509084677877099788
+    second: isaac_128
+  - first:
+      213: -3444291323548329435
+    second: isaac_129
+  - first:
+      213: 4197973389621043428
+    second: isaac_130
+  - first:
+      213: 326927645403333219
+    second: isaac_131
+  - first:
+      213: -2613703416982681113
+    second: isaac_132
+  - first:
+      213: -8763567310272177934
+    second: isaac_133
+  - first:
+      213: -7430397283065650988
+    second: isaac_134
+  - first:
+      213: 2164676266640994746
+    second: isaac_135
+  - first:
+      213: -7018581393650408776
+    second: isaac_136
+  - first:
+      213: -9173944505389965644
+    second: isaac_137
+  - first:
+      213: -7901567015654567812
+    second: isaac_138
+  - first:
+      213: 321983451992020427
+    second: isaac_139
+  - first:
+      213: 4919805070458535515
+    second: isaac_140
+  - first:
+      213: -8612832318696262712
+    second: isaac_141
+  - first:
+      213: 1672294410498105930
+    second: isaac_142
+  - first:
+      213: 8845867052547554908
+    second: isaac_143
+  - first:
+      213: 788037125812039640
+    second: isaac_144
+  - first:
+      213: 2175055033076756065
+    second: isaac_145
+  - first:
+      213: 6452112960417427432
+    second: isaac_146
+  - first:
+      213: -6307712023267116724
+    second: isaac_147
+  - first:
+      213: 6523580197218290097
+    second: isaac_148
+  - first:
+      213: 8718888142693936674
+    second: isaac_149
+  - first:
+      213: -1020101864378879437
+    second: isaac_150
+  - first:
+      213: -4940229959260257872
+    second: isaac_151
+  - first:
+      213: -3891511656308773215
+    second: isaac_152
+  - first:
+      213: 131450873525120179
+    second: isaac_153
+  - first:
+      213: 4386988838182772092
+    second: isaac_154
+  - first:
+      213: -2170578425568909215
+    second: isaac_155
+  - first:
+      213: 5062135647686366201
+    second: isaac_156
+  - first:
+      213: 8139377562399243203
+    second: isaac_157
+  - first:
+      213: 7937522561018206152
+    second: isaac_158
+  - first:
+      213: -6416332702890245049
+    second: isaac_159
+  - first:
+      213: -2194785756539916408
+    second: isaac_160
+  - first:
+      213: 3828244815710526996
+    second: isaac_161
+  - first:
+      213: 2414467082750825284
+    second: isaac_162
+  - first:
+      213: -4844619923103789822
+    second: isaac_163
+  - first:
+      213: 4031095671822525702
+    second: isaac_164
+  - first:
+      213: 5776044899131352925
+    second: isaac_165
+  - first:
+      213: 4034788610946579588
+    second: isaac_166
+  - first:
+      213: 7690260103936668900
+    second: isaac_167
+  - first:
+      213: -5425574222438366615
+    second: isaac_168
+  - first:
+      213: -9127210837043023488
+    second: isaac_169
+  - first:
+      213: -2656676349429232571
+    second: isaac_170
+  - first:
+      213: 3063278599024199463
+    second: isaac_171
+  - first:
+      213: 8083620324024578484
+    second: isaac_172
+  - first:
+      213: 4381452537296919317
+    second: isaac_173
+  - first:
+      213: -4489090826325390812
+    second: isaac_174
+  - first:
+      213: 4601024224395822357
+    second: isaac_175
+  - first:
+      213: 107660929241762395
+    second: isaac_176
+  - first:
+      213: -1947048354773262195
+    second: isaac_177
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: isaac_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 484
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89874ced97a08ce70800000000000000
+      internalID: 9135563362665789592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 483
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60dc333f475dd88c0800000000000000
+      internalID: -3995302596134580986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 484
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1d006eef3e887850800000000000000
+      internalID: 6375001677776293147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 483
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dc133921acf51550800000000000000
+      internalID: 6131084236845948118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_4
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 484
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 307cb2b6a62ad7430800000000000000
+      internalID: 3782357840009348867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_5
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 483
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 236e4d4b2453947d0800000000000000
+      internalID: -2933755121637202382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_6
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 484
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7824be48f134d610800000000000000
+      internalID: 1644994706439153787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_7
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 485
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ac99098f96cb4e70800000000000000
+      internalID: 9100585860533427364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_8
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 484
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c6a2687ccf6f220800000000000000
+      internalID: 2519478975439989780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_9
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 484
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d7c7328870b03c60800000000000000
+      internalID: 7795924986605586390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_10
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 485
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6601ad01d1728bf0800000000000000
+      internalID: -323571080526494102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_11
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 484
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a8dfa09627790ee0800000000000000
+      internalID: -1294372410372400983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_12
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 483
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 408535373708fe3f0800000000000000
+      internalID: -869334969714780156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_13
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 484
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b94b45020fd99180800000000000000
+      internalID: -9108003571608368715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_14
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 483
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00bc79716df02d6d0800000000000000
+      internalID: -2967291792290493696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_15
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 484
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61f2427d1309f6fa0800000000000000
+      internalID: -5805262850920009962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_16
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 483
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 993132acad83e62a0800000000000000
+      internalID: -6742389079781731431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_17
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 484
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cbc1753fac248660800000000000000
+      internalID: 7387078419822005193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_18
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 485
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35e513abebe44fc50800000000000000
+      internalID: 6698065126881320531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_19
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 484
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bbbc193b28409160800000000000000
+      internalID: 7030198368804322228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_20
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 484
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8671e19fd4cf05f70800000000000000
+      internalID: 9174109852775880552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_21
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 485
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc454eb839b6c610800000000000000
+      internalID: 1641202767584644277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_22
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 454
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e6a692bb0c64b140800000000000000
+      internalID: 4734527905769891556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_23
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 454
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ff95146d1ec5e010800000000000000
+      internalID: 1217605899902099446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_24
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 454
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a45574fa678061100800000000000000
+      internalID: 78259349365413194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_25
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 452
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f515bb0b900784b40800000000000000
+      internalID: 5424708938089845087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_26
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 453
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cea016b2b3aa6ed80800000000000000
+      internalID: -8221696898610689300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_27
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 454
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0843f7f5c8f803930800000000000000
+      internalID: 4120951492104369280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_28
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 454
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b555e53a7afa2d0800000000000000
+      internalID: -3265206884716160199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_29
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 454
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 937a81eac6c9208e0800000000000000
+      internalID: -1728647316365596871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_30
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 454
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 411f1f650c3bd08f0800000000000000
+      internalID: -572603938932395756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_31
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 454
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d744b09dd02f3b950800000000000000
+      internalID: 6463776031496684669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_32
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 454
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47a52ef6659c6b80800000000000000
+      internalID: -8400174935369734326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_33
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 452
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97ff8ae0b1138b1c0800000000000000
+      internalID: -4487783036394864775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_34
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 453
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2e360dcdf25ac8d0800000000000000
+      internalID: -2825354566201622998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_35
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 454
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb08d70d101902150800000000000000
+      internalID: 5845831753305784510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_36
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 454
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e928e7d8d77ec9d0800000000000000
+      internalID: -2752130549057836573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_37
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 454
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a9eafb844174c70800000000000000
+      internalID: 8955148686735612432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_38
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 454
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5e89788de93b0e20800000000000000
+      internalID: 3317809242848202334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_39
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 454
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1fbce0a82c4009c0800000000000000
+      internalID: -3963083934703763683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_40
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 454
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db2ab11e16572feb0800000000000000
+      internalID: -4687555198890302787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_41
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 452
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00df20813a0629370800000000000000
+      internalID: 8327824914560253184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_42
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 453
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c195042592f89e50800000000000000
+      internalID: 6816464758393639363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_43
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 454
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb9087c4ed8abafa0800000000000000
+      internalID: -5788347223335499330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_44
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 454
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a06e552bdce60c0800000000000000
+      internalID: -4580497605160203712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_45
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 454
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7558bef44e3c62c50800000000000000
+      internalID: 6640210085965170007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_46
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 454
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 595bba6af9f75c150800000000000000
+      internalID: 5892256011156960661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_47
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 454
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5bdb80060c247100800000000000000
+      internalID: 104757095626955611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_48
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 454
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 596950ee070c5c9e0800000000000000
+      internalID: -1601662501198129515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_49
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 452
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 475c541183251feb0800000000000000
+      internalID: -4687875336354544268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_50
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 453
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3243286a997c3f170800000000000000
+      internalID: 8211126008364020771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_51
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 454
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1efd8e1c8c865d90800000000000000
+      internalID: -7109340428321817060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_52
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 454
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 011df03a3ffeba4e0800000000000000
+      internalID: -1969216582352645872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_53
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 454
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb69d88a8e6e40c50800000000000000
+      internalID: 6630678438330865340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_54
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 422
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a90898d766e65240800000000000000
+      internalID: 4780261388190222757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_55
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 422
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0ed1c1672d754b00800000000000000
+      internalID: 812192915907534346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_56
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 422
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f983ba9a0d45b290800000000000000
+      internalID: -7875303665446974991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_57
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 422
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9c12f33762971cc0800000000000000
+      internalID: -3740359993557115747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_58
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 422
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a4b2699e69a3e00800000000000000
+      internalID: 1025297795171174995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_59
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 422
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4dfe184747c0570800000000000000
+      internalID: 8434244245903103162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_60
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 422
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829abd6760aa2a320800000000000000
+      internalID: 2567801682295236904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_61
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 422
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc328ad885ccf5e40800000000000000
+      internalID: 5647457138451686348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_62
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 422
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a129a42979e0e90800000000000000
+      internalID: -7057536911470880164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_63
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 422
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71793af4ab27f70b0800000000000000
+      internalID: -5728734056466376937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_64
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 422
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 440b3b895ca555880800000000000000
+      internalID: -8622886106813976508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_65
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 422
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a52579fa3c795dab0800000000000000
+      internalID: -4983910545895239078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_66
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 422
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6abcc06a624ce4ef0800000000000000
+      internalID: -121944469618766938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_67
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 422
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3bd1353be6d9ba70800000000000000
+      internalID: 8843335649016798013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_68
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 422
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f5bbb352b7992a20800000000000000
+      internalID: 3038126215802893811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_69
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 422
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f53c167bf6b16bbf0800000000000000
+      internalID: -309029357796342945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_70
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 422
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d934d33c69c318c80800000000000000
+      internalID: -8322304018185632867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_71
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 422
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4bacfbf3e4f9ac0800000000000000
+      internalID: -3846269521043475266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_72
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 422
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0d6f95504bd48a50800000000000000
+      internalID: 6522579229700222218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_73
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 422
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 844afdd961abd9b50800000000000000
+      internalID: 6601637235095741512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_74
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 422
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c29bd81c16708c80800000000000000
+      internalID: -8322522248332471616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_75
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 422
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6236604b4559e2740800000000000000
+      internalID: 5129201216651682598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_76
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 422
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a636453e05967e0800000000000000
+      internalID: -1771796041089979886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_77
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 422
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 960d4eb0993ff9d20800000000000000
+      internalID: 3287614091658842217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_78
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 422
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88d6dbe7eaee770c0800000000000000
+      internalID: -4577928062980756088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_79
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 422
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f92b2998a272fbf0800000000000000
+      internalID: -292044957375845898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_80
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 422
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cac764818340f9650800000000000000
+      internalID: 6241712247530749100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_81
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 422
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76609ca4f9978deb0800000000000000
+      internalID: -4694868886472292761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_82
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 422
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d3471bbfed05910800000000000000
+      internalID: 1824203021680393555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_83
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 422
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7619392df7a00b660800000000000000
+      internalID: 7399425731879735655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_84
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 422
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01552b8a77d18a830800000000000000
+      internalID: 4082545461979927824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_85
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 422
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19be197ea5508e3a0800000000000000
+      internalID: -6636048162940130415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_86
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 390
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b1bd97d4dd06e600800000000000000
+      internalID: 497100016672682419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_87
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 390
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05063b8f47ef6a6f0800000000000000
+      internalID: -673571315903143856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_88
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 390
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7a286575ce067020800000000000000
+      internalID: 2339073297706658428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_89
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 390
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89984e8df95938040800000000000000
+      internalID: 4648723754147678616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_90
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 317
+        width: 106
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867edc75770104d80800000000000000
+      internalID: -8268590811091966104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_91
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 390
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07f1134558393a0b0800000000000000
+      internalID: -5718564900977959056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_92
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 390
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fd6fe9c593c46ff0800000000000000
+      internalID: -43695048261407248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_93
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 390
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec86cc1c66f87f20800000000000000
+      internalID: 3420754861187566818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_94
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 390
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6e88775874b89f60800000000000000
+      internalID: 8041375563626614379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_95
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 332
+        width: 106
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccec7d3576455a8d0800000000000000
+      internalID: -2835767587594842420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_96
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 326
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c07c7eb6131aa62e0800000000000000
+      internalID: -2131714239970687220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_97
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 326
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d34ab7a5795925030800000000000000
+      internalID: 3482009939201467453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_98
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 326
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e1fa22aea2b4ec20800000000000000
+      internalID: 3234906895473635814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_99
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 322
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20b7859a3ba89b9d0800000000000000
+      internalID: -2758020792542790910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_100
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 340
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06a5ef8d43ebbbd50800000000000000
+      internalID: 6754201200360315488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_101
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 326
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66acc46f490d27e90800000000000000
+      internalID: -7029326730165958042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_102
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 326
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a13466936572e24d0800000000000000
+      internalID: -3157543037456465126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_103
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 326
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc1f72773b2bf9d10800000000000000
+      internalID: 2134621232264901071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_104
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 322
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26826ef23cf992000800000000000000
+      internalID: 11716134716188770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_105
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 340
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd7e55dc6cb490360800000000000000
+      internalID: 7136318401765828575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_106
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 262
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a8a5af69b3373300800000000000000
+      internalID: 231710777367963811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_107
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 262
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a2723661c1456c80800000000000000
+      internalID: -8330179636852788567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_108
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 264
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07c6e0f9d4e4b35d0800000000000000
+      internalID: -3081783424717001616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_109
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 260
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c3095b9ac770f4d0800000000000000
+      internalID: -3102848431184870463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_110
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 267
+        width: 74
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7836107252cfd9240800000000000000
+      internalID: 4800270014345208711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_111
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 268
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba70ec247c95d8160800000000000000
+      internalID: 7029373305749374891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_112
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 265
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 861598fc7ae72e210800000000000000
+      internalID: 1360789296625832296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_113
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 262
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ae5a3ae6f2603be0800000000000000
+      internalID: -1499589863283204444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_114
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 262
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc415276192553700800000000000000
+      internalID: 519412116485379275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_115
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 264
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33e8f26d92439bf60800000000000000
+      internalID: 8050523163193216563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_116
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 260
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2d808c251956fe20800000000000000
+      internalID: 3383990117491313965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_117
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 275
+        width: 74
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f9432af131caf70800000000000000
+      internalID: 9199749165397352292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_118
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 276
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397291bc8cf11d840800000000000000
+      internalID: 5247009988124682131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_119
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 273
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e69a5b7c61ebb70800000000000000
+      internalID: 8916589359242243624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_120
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 198
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f32f88a0faf48d0800000000000000
+      internalID: -2859874778574864561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_121
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 201
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4a4f5e1c15fad990800000000000000
+      internalID: -7360301139866203573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_122
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 199
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 896a805587e621d60800000000000000
+      internalID: 7859465762816698008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_123
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 200
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c4f06c7444c81e0800000000000000
+      internalID: -2194303843380016055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_124
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 198
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0d9d0a73159605a0800000000000000
+      internalID: -6555388296706548466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_125
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 201
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028c2417f2413e170800000000000000
+      internalID: 8206425139995396128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_126
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 199
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5436540812f6369b0800000000000000
+      internalID: -5088100964321893563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_127
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 200
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 939e2d57b7917e180800000000000000
+      internalID: -9086265705148257991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_128
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 148
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0d6507df9c739e30800000000000000
+      internalID: 4509084677877099788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_129
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 148
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a11f43a4b6330d0800000000000000
+      internalID: -3444291323548329435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_130
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 148
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e0a7e85e82324a30800000000000000
+      internalID: 4197973389621043428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_131
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 74
+        width: 16
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362458b16fa798400800000000000000
+      internalID: 326927645403333219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_132
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 148
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e9c58a17924abbd0800000000000000
+      internalID: -2613703416982681113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_133
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 148
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f8500276fd816680800000000000000
+      internalID: -8763567310272177934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_134
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 148
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d028daf90de1e890800000000000000
+      internalID: -7430397283065650988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_135
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 74
+        width: 16
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1fad678997a0e10800000000000000
+      internalID: 2164676266640994746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_136
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 132
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b22d44986df89e90800000000000000
+      internalID: -7018581393650408776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_137
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 127
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4be9517f31a9fa080800000000000000
+      internalID: -9173944505389965644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_138
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 132
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7057fed9aef75290800000000000000
+      internalID: -7901567015654567812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_139
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 116
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc5d98f5e3ae77400800000000000000
+      internalID: 321983451992020427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_140
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 113
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5eb8d435a8a64440800000000000000
+      internalID: 4919805070458535515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_141
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 132
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3fa1e83a2197880800000000000000
+      internalID: -8612832318696262712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_142
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 127
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a426c99f7ee253710800000000000000
+      internalID: 1672294410498105930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_143
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 132
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5ebd658735d2ca70800000000000000
+      internalID: 8845867052547554908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_144
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 116
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dfa8d9379bafea00800000000000000
+      internalID: 788037125812039640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_145
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 113
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16e277557095f2e10800000000000000
+      internalID: 2175055033076756065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_146
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 97
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8efef508d828a8950800000000000000
+      internalID: 6452112960417427432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_147
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 111
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49f3b3a5518678a0800000000000000
+      internalID: -6307712023267116724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_148
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 97
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b908fe30a9688a50800000000000000
+      internalID: 6523580197218290097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_149
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 111
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e23a53296bff870800000000000000
+      internalID: 8718888142693936674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_150
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 79
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 332bbf252ced7d1f0800000000000000
+      internalID: -1020101864378879437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_151
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 64
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b1cc89c607c07bb0800000000000000
+      internalID: -4940229959260257872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_152
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 79
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ae6c6644c29ef9c0800000000000000
+      internalID: -3891511656308773215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_153
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 64
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bc21ed7fd103d100800000000000000
+      internalID: 131450873525120179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_154
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 27
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ddc75ea17b1ec30800000000000000
+      internalID: 4386988838182772092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_155
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 26
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 168a6d21c6e80e1e0800000000000000
+      internalID: -2170578425568909215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_156
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 26
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f3103d1d81504640800000000000000
+      internalID: 5062135647686366201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_157
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 25
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cb779bc4c0e4f070800000000000000
+      internalID: 8139377562399243203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_158
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 27
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c79326e6beb72e60800000000000000
+      internalID: 7937522561018206152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_159
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 25
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7444183e66b94f6a0800000000000000
+      internalID: -6416332702890245049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_160
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 26
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88fe95f9bfd8a81e0800000000000000
+      internalID: -2194785756539916408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_161
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 25
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41e18a18068a02530800000000000000
+      internalID: 3828244815710526996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_162
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 32
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4439c35f409e18120800000000000000
+      internalID: 2414467082750825284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_163
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 23
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d4e9b09d374ccb0800000000000000
+      internalID: -4844619923103789822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_164
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 23
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 605a896e72451f730800000000000000
+      internalID: 4031095671822525702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_165
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 30
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d576e63ab32a82050800000000000000
+      internalID: 5776044899131352925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_166
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 22
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c334b4dd27ef730800000000000000
+      internalID: 4034788610946579588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_167
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 22
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e4f08dd1da49ba60800000000000000
+      internalID: 7690260103936668900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_168
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 25
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9628b099dfc74b4b0800000000000000
+      internalID: -5425574222438366615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_169
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 22
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08174fb0a12a55180800000000000000
+      internalID: -9127210837043023488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_170
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 24
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54cc6159fe6912bd0800000000000000
+      internalID: -2656676349429232571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_171
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 21
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 727c4e6e7a3f28a20800000000000000
+      internalID: 3063278599024199463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_172
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 26
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b1fc981bd9ce2070800000000000000
+      internalID: 8083620324024578484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_173
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 24
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51b11d56edb0ecc30800000000000000
+      internalID: 4381452537296919317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_174
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 25
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42a096c7dab83b1c0800000000000000
+      internalID: -4489090826325390812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_175
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 22
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5158412a72f1adf30800000000000000
+      internalID: 4601024224395822357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_176
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 24
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5ac4a37b0d7e7100800000000000000
+      internalID: 107660929241762395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isaac_177
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 21
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d802b3556d1baf4e0800000000000000
+      internalID: -1947048354773262195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      isaac_0: 9135563362665789592
+      isaac_1: -3995302596134580986
+      isaac_10: -323571080526494102
+      isaac_100: 6754201200360315488
+      isaac_101: -7029326730165958042
+      isaac_102: -3157543037456465126
+      isaac_103: 2134621232264901071
+      isaac_104: 11716134716188770
+      isaac_105: 7136318401765828575
+      isaac_106: 231710777367963811
+      isaac_107: -8330179636852788567
+      isaac_108: -3081783424717001616
+      isaac_109: -3102848431184870463
+      isaac_11: -1294372410372400983
+      isaac_110: 4800270014345208711
+      isaac_111: 7029373305749374891
+      isaac_112: 1360789296625832296
+      isaac_113: -1499589863283204444
+      isaac_114: 519412116485379275
+      isaac_115: 8050523163193216563
+      isaac_116: 3383990117491313965
+      isaac_117: 9199749165397352292
+      isaac_118: 5247009988124682131
+      isaac_119: 8916589359242243624
+      isaac_12: -869334969714780156
+      isaac_120: -2859874778574864561
+      isaac_121: -7360301139866203573
+      isaac_122: 7859465762816698008
+      isaac_123: -2194303843380016055
+      isaac_124: -6555388296706548466
+      isaac_125: 8206425139995396128
+      isaac_126: -5088100964321893563
+      isaac_127: -9086265705148257991
+      isaac_128: 4509084677877099788
+      isaac_129: -3444291323548329435
+      isaac_13: -9108003571608368715
+      isaac_130: 4197973389621043428
+      isaac_131: 326927645403333219
+      isaac_132: -2613703416982681113
+      isaac_133: -8763567310272177934
+      isaac_134: -7430397283065650988
+      isaac_135: 2164676266640994746
+      isaac_136: -7018581393650408776
+      isaac_137: -9173944505389965644
+      isaac_138: -7901567015654567812
+      isaac_139: 321983451992020427
+      isaac_14: -2967291792290493696
+      isaac_140: 4919805070458535515
+      isaac_141: -8612832318696262712
+      isaac_142: 1672294410498105930
+      isaac_143: 8845867052547554908
+      isaac_144: 788037125812039640
+      isaac_145: 2175055033076756065
+      isaac_146: 6452112960417427432
+      isaac_147: -6307712023267116724
+      isaac_148: 6523580197218290097
+      isaac_149: 8718888142693936674
+      isaac_15: -5805262850920009962
+      isaac_150: -1020101864378879437
+      isaac_151: -4940229959260257872
+      isaac_152: -3891511656308773215
+      isaac_153: 131450873525120179
+      isaac_154: 4386988838182772092
+      isaac_155: -2170578425568909215
+      isaac_156: 5062135647686366201
+      isaac_157: 8139377562399243203
+      isaac_158: 7937522561018206152
+      isaac_159: -6416332702890245049
+      isaac_16: -6742389079781731431
+      isaac_160: -2194785756539916408
+      isaac_161: 3828244815710526996
+      isaac_162: 2414467082750825284
+      isaac_163: -4844619923103789822
+      isaac_164: 4031095671822525702
+      isaac_165: 5776044899131352925
+      isaac_166: 4034788610946579588
+      isaac_167: 7690260103936668900
+      isaac_168: -5425574222438366615
+      isaac_169: -9127210837043023488
+      isaac_17: 7387078419822005193
+      isaac_170: -2656676349429232571
+      isaac_171: 3063278599024199463
+      isaac_172: 8083620324024578484
+      isaac_173: 4381452537296919317
+      isaac_174: -4489090826325390812
+      isaac_175: 4601024224395822357
+      isaac_176: 107660929241762395
+      isaac_177: -1947048354773262195
+      isaac_18: 6698065126881320531
+      isaac_19: 7030198368804322228
+      isaac_2: 6375001677776293147
+      isaac_20: 9174109852775880552
+      isaac_21: 1641202767584644277
+      isaac_22: 4734527905769891556
+      isaac_23: 1217605899902099446
+      isaac_24: 78259349365413194
+      isaac_25: 5424708938089845087
+      isaac_26: -8221696898610689300
+      isaac_27: 4120951492104369280
+      isaac_28: -3265206884716160199
+      isaac_29: -1728647316365596871
+      isaac_3: 6131084236845948118
+      isaac_30: -572603938932395756
+      isaac_31: 6463776031496684669
+      isaac_32: -8400174935369734326
+      isaac_33: -4487783036394864775
+      isaac_34: -2825354566201622998
+      isaac_35: 5845831753305784510
+      isaac_36: -2752130549057836573
+      isaac_37: 8955148686735612432
+      isaac_38: 3317809242848202334
+      isaac_39: -3963083934703763683
+      isaac_4: 3782357840009348867
+      isaac_40: -4687555198890302787
+      isaac_41: 8327824914560253184
+      isaac_42: 6816464758393639363
+      isaac_43: -5788347223335499330
+      isaac_44: -4580497605160203712
+      isaac_45: 6640210085965170007
+      isaac_46: 5892256011156960661
+      isaac_47: 104757095626955611
+      isaac_48: -1601662501198129515
+      isaac_49: -4687875336354544268
+      isaac_5: -2933755121637202382
+      isaac_50: 8211126008364020771
+      isaac_51: -7109340428321817060
+      isaac_52: -1969216582352645872
+      isaac_53: 6630678438330865340
+      isaac_54: 4780261388190222757
+      isaac_55: 812192915907534346
+      isaac_56: -7875303665446974991
+      isaac_57: -3740359993557115747
+      isaac_58: 1025297795171174995
+      isaac_59: 8434244245903103162
+      isaac_6: 1644994706439153787
+      isaac_60: 2567801682295236904
+      isaac_61: 5647457138451686348
+      isaac_62: -7057536911470880164
+      isaac_63: -5728734056466376937
+      isaac_64: -8622886106813976508
+      isaac_65: -4983910545895239078
+      isaac_66: -121944469618766938
+      isaac_67: 8843335649016798013
+      isaac_68: 3038126215802893811
+      isaac_69: -309029357796342945
+      isaac_7: 9100585860533427364
+      isaac_70: -8322304018185632867
+      isaac_71: -3846269521043475266
+      isaac_72: 6522579229700222218
+      isaac_73: 6601637235095741512
+      isaac_74: -8322522248332471616
+      isaac_75: 5129201216651682598
+      isaac_76: -1771796041089979886
+      isaac_77: 3287614091658842217
+      isaac_78: -4577928062980756088
+      isaac_79: -292044957375845898
+      isaac_8: 2519478975439989780
+      isaac_80: 6241712247530749100
+      isaac_81: -4694868886472292761
+      isaac_82: 1824203021680393555
+      isaac_83: 7399425731879735655
+      isaac_84: 4082545461979927824
+      isaac_85: -6636048162940130415
+      isaac_86: 497100016672682419
+      isaac_87: -673571315903143856
+      isaac_88: 2339073297706658428
+      isaac_89: 4648723754147678616
+      isaac_9: 7795924986605586390
+      isaac_90: -8268590811091966104
+      isaac_91: -5718564900977959056
+      isaac_92: -43695048261407248
+      isaac_93: 3420754861187566818
+      isaac_94: 8041375563626614379
+      isaac_95: -2835767587594842420
+      isaac_96: -2131714239970687220
+      isaac_97: 3482009939201467453
+      isaac_98: 3234906895473635814
+      isaac_99: -2758020792542790910
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
