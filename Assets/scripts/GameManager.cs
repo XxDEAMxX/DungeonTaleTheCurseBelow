@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     {
         if (vidaCount > 0)
         {   
-            Movement.instance.GetDamage(position);
+            // Movement.instance.GetDamage(position);
             vidaCount--;
             hud.UpdateLife(vidaCount);
             if (vidaCount == 0)

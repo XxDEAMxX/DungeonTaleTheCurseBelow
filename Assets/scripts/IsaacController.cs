@@ -7,9 +7,11 @@ public class IsaacController : MonoBehaviour
   private Rigidbody2D rb;
   private Animator animatorBody;
   private Animator animatorHead;
+  private Animator animatorHair;
   public GameObject bulletPrefab;
   public GameObject body;
   public GameObject head;
+  public GameObject hair;
   public float bulletSpeed = 10f; // Velocidad de la bala
   public float fireDelay = 5f; // Delay entre disparos
   private float lastFire;
@@ -20,9 +22,10 @@ public class IsaacController : MonoBehaviour
     rb = GetComponent<Rigidbody2D>();
     animatorBody = GameObject.FindGameObjectWithTag("Body").GetComponent<Animator>();
     animatorHead = GameObject.FindGameObjectWithTag("Head").GetComponent<Animator>();
+    animatorHair = GameObject.FindGameObjectWithTag("Hair").GetComponent<Animator>();
     head = GameObject.FindGameObjectWithTag("Head");
     body = GameObject.FindGameObjectWithTag("Body");
-
+    hair = GameObject.FindGameObjectWithTag("Hair");
     if (rb == null)
     {
       Debug.LogError("No se encontró Rigidbody2D en " + gameObject.name);
@@ -79,6 +82,8 @@ public class IsaacController : MonoBehaviour
 
       animatorHead.SetBool("isHor", isHorizontal);
       animatorHead.SetBool("isBack", isUpward);
+      animatorHair.SetBool("isHor", isHorizontal);
+      animatorHair.SetBool("isBack", isUpward);
 
       // Cambiar dirección de la cabeza si es horizontal
       if (isHorizontal)
@@ -86,6 +91,7 @@ public class IsaacController : MonoBehaviour
           Vector3 headScale = head.transform.localScale;
           headScale.x = direction.x > 0 ? Mathf.Abs(headScale.x) : -Mathf.Abs(headScale.x);
           head.transform.localScale = headScale;
+          hair.transform.localScale = headScale;
       }
 
       rb.linearVelocity = direction * bulletSpeed;
@@ -124,29 +130,43 @@ public class IsaacController : MonoBehaviour
     if (x > 0)
     {
       head.transform.localScale = new Vector3(1, 1, 1);
+      hair.transform.localScale = new Vector3(1, 1, 1);
       animatorHead.SetBool("isHor", true);
+      animatorHair.SetBool("isHor", true);
       animatorHead.SetBool("isBack", false);
+      animatorHair.SetBool("isBack", false);
     }
     else if (x < 0)
     {
       head.transform.localScale = new Vector3(-1, 1, 1);
+      hair.transform.localScale = new Vector3(-1, 1, 1);
       animatorHead.SetBool("isHor", true);
+      animatorHair.SetBool("isHor", true);
       animatorHead.SetBool("isBack", false);
+      animatorHair.SetBool("isBack", false);
     }
       else if (y > 0)
       {
         head.transform.localScale = new Vector3(1, 1, 1);
+        hair.transform.localScale = new Vector3(1, 1, 1);
         animatorHead.SetBool("isHor", false);
+        animatorHair.SetBool("isHor", false);
         animatorHead.SetBool("isBack", true);
+        animatorHair.SetBool("isBack", true);
       }
       else if (y < 0)
       {
         head.transform.localScale = new Vector3(-1, 1, 1);
+        hair.transform.localScale = new Vector3(-1, 1, 1);
         animatorHead.SetBool("isHor", false);
+        animatorHair.SetBool("isHor", false);
         animatorHead.SetBool("isBack", false);
+        animatorHair.SetBool("isBack", false);
     } else {
       animatorHead.SetBool("isBack", false);
       animatorHead.SetBool("isHor", false);
+      animatorHair.SetBool("isHor", false);
+      animatorHair.SetBool("isBack", false);
     }
   }
   void bodyAnimtions(float x, float y)
