@@ -12,9 +12,7 @@ public class Enemy : MonoBehaviour
     EnemyState curreState = EnemyState.Wander;
     public float range;
     public float speed;
-    private bool chooseDirection = false;
     private Vector2 randomDirection;
-    private float wanderDuration = 2f;
     private float wanderTimer = 0f;
     private float waitTimer = 5f;
     private bool isWaiting = false;
@@ -57,13 +55,6 @@ public class Enemy : MonoBehaviour
         return Vector2.Distance(transform.position, player.transform.position) < range;
     }
 
-    private IEnumerator ChooseDirection()
-    {
-        chooseDirection = true;
-        //Todo: Random
-        yield return new WaitForSeconds(UnityEngine.Random.Range(1f, 3f));
-        chooseDirection = false;
-    }
 
     void Wander()
     {
@@ -126,6 +117,11 @@ public class Enemy : MonoBehaviour
             }
             
         }  
+        if (collision.CompareTag("BombRange"))
+        {
+            curreState = EnemyState.Dead;   
+            animator.SetBool("BlDeath", true);
+        }
     }
 
     void Death()

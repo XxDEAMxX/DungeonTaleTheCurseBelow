@@ -11,6 +11,8 @@ TagManager:
   - Body
   - Head
   - Hair
+  - BombRange
+  - Death
   layers:
   - Default
   - TransparentFX

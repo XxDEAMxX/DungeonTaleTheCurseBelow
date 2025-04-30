@@ -6,7 +6,15 @@ public class GameManager : MonoBehaviour
     public HUD hud;
     public int Point { get { return point; } }
     private int point;
-    public int vidaCount = 8;
+    public int vidaCount = 3;
+    public int NumbBombs { get { return numbBombs; } }
+    private int numbBombs = 2;
+
+    void Start()
+    {
+        hud.UpdateNumbBombs(numbBombs);
+        IsaacController.instance.SetBombs(numbBombs);
+    }
 
     void Awake()
     {
@@ -34,13 +42,28 @@ public class GameManager : MonoBehaviour
     {
         if (vidaCount > 0)
         {   
-            // Movement.instance.GetDamage(position);
+            IsaacController.instance.Damage(position);
             vidaCount--;
             hud.UpdateLife(vidaCount);
             if (vidaCount == 0)
             {
-                Movement.instance.Death();
+                IsaacController.instance.Death();
             }
         }
+    }
+
+    public void DecreaseBombs()
+    {
+        if (numbBombs <= 0) return;
+        numbBombs--;
+        hud.UpdateNumbBombs(numbBombs);
+        IsaacController.instance.SetBombs(numbBombs);
+    }
+
+    public void IncreaseBombs()
+    {
+        numbBombs++;
+        hud.UpdateNumbBombs(numbBombs);
+        IsaacController.instance.SetBombs(numbBombs);
     }
 }

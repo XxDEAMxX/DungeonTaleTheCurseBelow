@@ -3,29 +3,42 @@ using UnityEngine;
 
 public class IsaacController : MonoBehaviour
 {
+  public static IsaacController instance { get; private set; }
+
   public float velocidad = 5f;
   private Rigidbody2D rb;
+  private Animator animator;
   private Animator animatorBody;
   private Animator animatorHead;
   private Animator animatorHair;
   public GameObject bulletPrefab;
+  public GameObject bombPrefab;
   public GameObject body;
   public GameObject head;
   public GameObject hair;
+  public GameObject death;
+  private bool isDamage = false;
+  private bool isDeath = false;
   public float bulletSpeed = 10f; // Velocidad de la bala
   public float fireDelay = 5f; // Delay entre disparos
+  public float bombDelay = 5f; // Delay entre bombas
+  private float lastBoom; // Velocidad de la bomba
   private float lastFire;
   private bool isShooting = false;
+  private int numberOfBombs; // Número de bombas que tiene el jugador
+  public Transform groundCheck;
   void Start()
   {
-    Debug.Log("IsaacController Start llamado");
     rb = GetComponent<Rigidbody2D>();
+    animator = GetComponent<Animator>();
     animatorBody = GameObject.FindGameObjectWithTag("Body").GetComponent<Animator>();
     animatorHead = GameObject.FindGameObjectWithTag("Head").GetComponent<Animator>();
     animatorHair = GameObject.FindGameObjectWithTag("Hair").GetComponent<Animator>();
     head = GameObject.FindGameObjectWithTag("Head");
     body = GameObject.FindGameObjectWithTag("Body");
     hair = GameObject.FindGameObjectWithTag("Hair");
+    death = GameObject.FindGameObjectWithTag("Death");
+    death.SetActive(false);
     if (rb == null)
     {
       Debug.LogError("No se encontró Rigidbody2D en " + gameObject.name);
@@ -36,9 +49,9 @@ public class IsaacController : MonoBehaviour
     }
   }
 
-  void Awake()
+  public void SetBombs(int value)
   {
-    Debug.Log("IsaacController Awake llamado");
+      numberOfBombs = value;
   }
 
   void preShoot()
@@ -56,6 +69,32 @@ public class IsaacController : MonoBehaviour
           shoot(shootHor, shootVer);
           lastFire = Time.time;
       }
+  }
+
+  public void Damage(Vector2 position)
+  {
+      if (isDamage) return;
+      animatorHead.SetBool("isDamage", true);
+      isDamage = true;
+      Vector2 force = position * 5f;;
+      rb.AddForce(force, ForceMode2D.Impulse);
+  }
+
+  public void IsDamageFalse()
+  {
+      isDamage = false;
+      animatorHead.SetBool("isDamage", false);
+  }
+
+  public void Death()
+  {
+      head.SetActive(false);
+      hair.SetActive(false);
+      body.SetActive(false);
+      death.SetActive(true);
+      isDeath = true;
+      rb.linearVelocity = Vector2.zero;
+      rb.bodyType = RigidbodyType2D.Static;
   }
 
   IEnumerator ResetShootFlag()
@@ -101,9 +140,21 @@ public class IsaacController : MonoBehaviour
 
 
   void Update(){
+    if (isDeath) return;
     Mover();
     preShoot();
+    Bomb();
   }
+
+ void Bomb() {
+    if (Input.GetKey(KeyCode.E) && numberOfBombs > 0 && Time.time > lastBoom + bombDelay) {
+        Vector3 spawnPos = new Vector3(groundCheck.position.x, groundCheck.position.y, 0);
+        Instantiate(bombPrefab, spawnPos, Quaternion.identity);
+        lastBoom = Time.time;
+        numberOfBombs--;
+        GameManager.instance.DecreaseBombs();
+    }
+}
 
   void Mover(){
     float inputX = 0f;
@@ -200,4 +251,16 @@ public class IsaacController : MonoBehaviour
       body.transform.localScale = new Vector3(-1, 1, 1);
     }
   }
+
+  void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 }

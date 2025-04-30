@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class HUD : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI bombText;
     public GameObject[] vida;
 
     void Start()
@@ -26,5 +27,10 @@ public class HUD : MonoBehaviour
         {
             vida[i].SetActive(i < life);
         }
+    }
+
+    public void UpdateNumbBombs(int numBombs)
+    {
+        bombText.text = numBombs.ToString();
     }
 }
