@@ -6,7 +6,7 @@ using System.Collections;
 
 public class BulletController : MonoBehaviour
 {
-    public float lifeTime;
+    public float lifeTime = 2f; // Tiempo de vida de la bala
     void Start()
     {
         StartCoroutine(DeathDelay()); 

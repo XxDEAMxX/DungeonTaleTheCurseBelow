@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 104091516}
   m_Layer: 0
   m_Name: body
-  m_TagString: Untagged
+  m_TagString: Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -282,7 +282,7 @@ Transform:
   m_GameObject: {fileID: 104091514}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.07447432, y: -0.21699995, z: -0.039201442}
+  m_LocalPosition: {x: 0, y: -0.21699995, z: -0.039201442}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -636,9 +636,10 @@ GameObject:
   m_Component:
   - component: {fileID: 345758262}
   - component: {fileID: 345758263}
+  - component: {fileID: 345758264}
   m_Layer: 0
   m_Name: head
-  m_TagString: Untagged
+  m_TagString: Head
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -652,7 +653,7 @@ Transform:
   m_GameObject: {fileID: 345758261}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08, y: 0.27, z: -0.039201442}
+  m_LocalPosition: {x: 0, y: 0.27, z: -0.039201442}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -713,6 +714,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &345758264
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345758261}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d49483d8ee1047845b21a4e6d22690a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &490406308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1311,7 +1334,7 @@ GameObject:
   - component: {fileID: 1264769381}
   m_Layer: 0
   m_Name: isaac
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1325,7 +1348,7 @@ Transform:
   m_GameObject: {fileID: 1264769378}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.116525814, y: -0.19438985, z: 0.039201442}
+  m_LocalPosition: {x: -1.279, y: 0.013, z: 0.039201442}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1346,6 +1369,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
+  bulletPrefab: {fileID: 3109314803948305786, guid: 9574d14b03c11c249a78f63f1705046c, type: 3}
+  body: {fileID: 0}
+  head: {fileID: 0}
+  bulletSpeed: 5
+  fireDelay: 0.2
 --- !u!61 &1264769381
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1380,7 +1408,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.10337865, y: 0.04680206}
+  m_Offset: {x: 0.001690343, y: 0.046802044}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1390,7 +1418,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.7932427, y: 0.9063959}
+  m_Size: {x: 0.86937964, y: 0.9063959}
   m_EdgeRadius: 0
 --- !u!50 &1264769382
 Rigidbody2D:
@@ -1418,7 +1446,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &1326753216
 GameObject:
   m_ObjectHideFlags: 0
@@ -2633,7 +2661,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &1887038647
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,7 +2718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1969907520
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3148,6 +3176,10 @@ PrefabInstance:
     - target: {fileID: 5003813602476649722, guid: 9cc882f9b6f46e6498b34ca6b02a10f2, type: 3}
       propertyPath: m_Name
       value: Finn
+      objectReference: {fileID: 0}
+    - target: {fileID: 5003813602476649722, guid: 9cc882f9b6f46e6498b34ca6b02a10f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8126144797540271411, guid: 9cc882f9b6f46e6498b34ca6b02a10f2, type: 3}
       propertyPath: fireDelay

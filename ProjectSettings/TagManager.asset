@@ -8,6 +8,8 @@ TagManager:
   - Sword
   - Bullet
   - Zombie
+  - Body
+  - Head
   layers:
   - Default
   - TransparentFX
