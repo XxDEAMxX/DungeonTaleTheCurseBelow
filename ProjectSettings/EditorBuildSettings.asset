@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scene/DungeonRooms/BasementStart.unity
+    guid: ab2b19448500ea741bfcd555501215c7
+  - enabled: 1
+    path: Assets/Scene/DungeonRooms/BasementMain.unity
+    guid: 42d1906292c155d488962a36842a16b5
+  - enabled: 1
+    path: Assets/Scene/DungeonRooms/BasementEmpty.unity
+    guid: cbf3ecddf4cb4724aa452872229c673c
+  - enabled: 1
+    path: Assets/Scene/DungeonRooms/BasementEnd.unity
+    guid: c2f9b077dbfba174cb94f57647f2f3fd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
