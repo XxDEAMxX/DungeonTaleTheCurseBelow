@@ -299,6 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de2f86c4252200d4988920c809a5f346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadedRooms: []
 --- !u!4 &1679406485
 Transform:
   m_ObjectHideFlags: 0
@@ -357,6 +358,57 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 969335633}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2013754313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2013754315}
+  - component: {fileID: 2013754314}
+  m_Layer: 0
+  m_Name: ItemSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2013754314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013754313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b399942fccf06a54cb4efef8c04b2653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - gameObject: {fileID: 7659320874477015004, guid: 46a9316e2ec197f48b987e6ba7c98966, type: 3}
+    weight: 0.7
+  - gameObject: {fileID: 7152318193329880489, guid: 53c6d8a8ba26c084085730b9c42446ea, type: 3}
+    weight: 0.2
+  - gameObject: {fileID: 1691126697441754678, guid: eeb3db26010a9a647a3ec017dfb1b2c4, type: 3}
+    weight: 0.1
+--- !u!4 &2013754315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013754313}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2145168850 stripped
@@ -738,6 +790,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8643031642130147755, guid: 21f50d9e93bc88a458a8b7cc9d4dc6fd, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8643031642130147755, guid: 21f50d9e93bc88a458a8b7cc9d4dc6fd, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8643031642130147755, guid: 21f50d9e93bc88a458a8b7cc9d4dc6fd, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -820,3 +884,4 @@ SceneRoots:
   - {fileID: 2179420736163711359}
   - {fileID: 343226933}
   - {fileID: 1679406485}
+  - {fileID: 2013754315}

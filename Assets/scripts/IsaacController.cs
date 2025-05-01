@@ -1,11 +1,12 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IsaacController : MonoBehaviour
 {
   public static IsaacController instance { get; private set; }
 
-  public float velocidad = 5f;
+  public float speed;
   private Rigidbody2D rb;
   private Animator animator;
   private Animator animatorBody;
@@ -27,6 +28,11 @@ public class IsaacController : MonoBehaviour
   private bool isShooting = false;
   private int numberOfBombs; // Número de bombas que tiene el jugador
   public Transform groundCheck;
+
+
+  public Text collectedText;
+  public static int collectedAmount = 0;
+
   void Start()
   {
     rb = GetComponent<Rigidbody2D>();
@@ -47,6 +53,17 @@ public class IsaacController : MonoBehaviour
     {
       Debug.LogError("No se encontró Animator en " + gameObject.name);
     }
+  }
+
+  void Update(){
+    fireDelay = GameManager.FireRate;
+    bulletSpeed = GameManager.BulletSize;
+    speed = GameManager.MoveSpeed;
+    if (isDeath) return;
+    Mover();
+    preShoot();
+    Bomb();
+    collectedText.text = "Bombs: " + collectedAmount;
   }
 
   public void SetBombs(int value)
@@ -139,12 +156,7 @@ public class IsaacController : MonoBehaviour
 
 
 
-  void Update(){
-    if (isDeath) return;
-    Mover();
-    preShoot();
-    Bomb();
-  }
+  
 
  void Bomb() {
     if (Input.GetKey(KeyCode.E) && numberOfBombs > 0 && Time.time > lastBoom + bombDelay) {
@@ -173,7 +185,7 @@ public class IsaacController : MonoBehaviour
 
     if (rb != null)
     {
-      rb.linearVelocity = input * velocidad;
+      rb.linearVelocity = input * speed;
     }
   }
 

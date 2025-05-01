@@ -15,6 +15,7 @@ public class BulletController : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         StartCoroutine(DeathDelay()); 
+        transform.localScale = new Vector3(GameManager.BulletSize, GameManager.BulletSize, 1);
     }
 
     void Update()

@@ -1,12 +1,30 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
+    private static int health = 3;
+    private static int maxHealth = 10;
+    private static float moveSpeed = 3f;
+    private static float fireRate = 0.5f;
+    private static float bulletSize = 0.5f;
+    public static int Health { get => health;  set => health = value; }
+    public static int MaxHealth { get => maxHealth; set => maxHealth = value; }
+    public static float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+    public static float FireRate { get => fireRate; set => fireRate = value; }
+    public static float BulletSize { get => bulletSize; set => bulletSize = value; }
+
+
+
+
     public HUD hud;
     public int Point { get { return point; } }
+    private bool redSyringeCollected = false;
+    private bool greenSyringeCollected = false;
+    private bool bigEyeSyringeCollected = false;
+    public List<string> collectedNames = new List<string>();
     private int point;
-    public int vidaCount = 3;
     public int NumbBombs { get { return numbBombs; } }
     private int numbBombs = 2;
 
@@ -35,17 +53,17 @@ public class GameManager : MonoBehaviour
 
        public void UpdateLifeCount(int count)
     {
-        vidaCount = count;
-        hud.UpdateLife(vidaCount);
+        health = count;
+        hud.UpdateLife(health);
     }
     public void DecreaseLife(Vector2 position)
     {
-        if (vidaCount > 0)
+        if (health > 0)
         {   
             IsaacController.instance.Damage(position);
-            vidaCount--;
-            hud.UpdateLife(vidaCount);
-            if (vidaCount == 0)
+            health--;
+            hud.UpdateLife(health);
+            if (health == 0)
             {
                 IsaacController.instance.Death();
             }
@@ -60,10 +78,58 @@ public class GameManager : MonoBehaviour
         IsaacController.instance.SetBombs(numbBombs);
     }
 
+    // public void UpdateCollectedItem(CollectionController item)
+    // {
+    //     collectedNames.Add(item.item.name);
+    //     foreach (var i in item.item.effects)
+    //     {
+    //         switch (i)
+    //         {
+    //             case "red syringe":
+    //                 redSyringeCollected = true;
+    //                 break;
+    //             case "green syringe":
+    //                 greenSyringeCollected = true;
+    //                 break;
+    //             case "big eye":
+    //                 bigEyeSyringeCollected = true;
+    //                 break;
+    //         }
+    //     }
+    //     if (redSyringeCollected && greenSyringeCollected && bigEyeSyringeCollected)
+    //     {
+    //         AddPoint(1000);
+    //         redSyringeCollected = false;
+    //         greenSyringeCollected = false;
+    //         bigEyeSyringeCollected = false;
+    //     }
+    // }
+
     public void IncreaseBombs()
     {
         numbBombs++;
         hud.UpdateNumbBombs(numbBombs);
         IsaacController.instance.SetBombs(numbBombs);
+    }
+
+    public void HealPlayer(int healthAmount)
+    {
+        health += Mathf.Min(maxHealth, health + healthAmount);
+    }
+
+    public void MoveSpeedChange(float value)
+    {
+        moveSpeed += value;
+        // hud.UpdateMoveSpeed(moveSpeed);
+    }
+    public void FireRateChange(float value)
+    {
+        fireRate += value;
+        // hud.UpdateFireRate(fireRate);
+    }
+    public void BulletSizeChange(float value)
+    {
+        bulletSize += value;
+        // hud.UpdateBulletSize(bulletSize);
     }
 }
