@@ -53,5 +53,8 @@ TagManager:
   - name: Door
     uniqueID: 3062798895
     locked: 0
+  - name: Wall
+    uniqueID: 2664611599
+    locked: 0
   m_RenderingLayers:
   - Default

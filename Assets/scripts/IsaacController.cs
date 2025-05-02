@@ -20,8 +20,8 @@ public class IsaacController : MonoBehaviour
   public GameObject death;
   private bool isDamage = false;
   private bool isDeath = false;
-  public float bulletSpeed = 10f; // Velocidad de la bala
-  public float fireDelay = 5f; // Delay entre disparos
+  public float bulletSpeed = 20f; // Velocidad de la bala
+  public float fireDelay = 0.2f; // Delay entre disparos
   public float bombDelay = 5f; // Delay entre bombas
   private float lastBoom; // Velocidad de la bomba
   private float lastFire;
@@ -63,7 +63,7 @@ public class IsaacController : MonoBehaviour
     Mover();
     preShoot();
     Bomb();
-    collectedText.text = "Bombs: " + collectedAmount;
+    // collectedText.text = "Bombs: " + collectedAmount;
   }
 
   public void SetBombs(int value)

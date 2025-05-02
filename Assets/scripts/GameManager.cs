@@ -7,13 +7,18 @@ public class GameManager : MonoBehaviour
     private static int health = 3;
     private static int maxHealth = 10;
     private static float moveSpeed = 3f;
-    private static float fireRate = 0.5f;
-    private static float bulletSize = 0.5f;
+    private static float fireRate = 0.2f;
+    private static float bulletSize = 2f;
     public static int Health { get => health;  set => health = value; }
     public static int MaxHealth { get => maxHealth; set => maxHealth = value; }
     public static float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
     public static float FireRate { get => fireRate; set => fireRate = value; }
     public static float BulletSize { get => bulletSize; set => bulletSize = value; }
+
+
+    private bool bootCollected = false;
+    private bool screwCollected = false;
+    public List<string> collectedItems = new List<string>();
 
 
 
@@ -112,24 +117,49 @@ public class GameManager : MonoBehaviour
         IsaacController.instance.SetBombs(numbBombs);
     }
 
-    public void HealPlayer(int healthAmount)
+    public static void HealPlayer(int healthAmount)
     {
         health += Mathf.Min(maxHealth, health + healthAmount);
     }
 
-    public void MoveSpeedChange(float value)
+    public static void MoveSpeedChange(float value)
     {
         moveSpeed += value;
         // hud.UpdateMoveSpeed(moveSpeed);
     }
-    public void FireRateChange(float value)
+    public static void FireRateChange(float value)
     {
         fireRate += value;
         // hud.UpdateFireRate(fireRate);
     }
-    public void BulletSizeChange(float value)
+    public static void BulletSizeChange(float value)
     {
         bulletSize += value;
         // hud.UpdateBulletSize(bulletSize);
+    }
+
+//Sinergias
+    public void UpdateCollectedItems(CollectionController item)
+    {
+        collectedItems.Add(item.item.name);
+        
+        foreach (var i in collectedItems)
+        {
+            switch (i)
+            {
+                case "Boot":
+                    bootCollected = true;
+                    break;
+                case "Screw":
+                    screwCollected = true;
+                    break;
+            }
+        }
+
+        if (bootCollected && screwCollected)
+        {
+            FireRateChange(0.25f);
+        }
+        // hud.UpdateCollectedItems(collectedItems);
     }
 }

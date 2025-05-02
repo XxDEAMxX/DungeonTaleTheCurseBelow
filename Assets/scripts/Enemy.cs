@@ -3,24 +3,25 @@ using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 
-public enum EnemyState { Wander, Follow, Dead };
+public enum EnemyState { Idle, Wander, Follow, Dead };
 public class Enemy : MonoBehaviour
 {
     private int life ;
     private Animator animator;
     private GameObject player;
-    EnemyState curreState = EnemyState.Wander;
+    EnemyState curreState = EnemyState.Idle;
     public float range;
     public float speed;
     private Vector2 randomDirection;
     private float wanderTimer = 0f;
     private float waitTimer = 5f;
     private bool isWaiting = false;
+    public bool notInRoom = false;
 
 
     void Start()
     {   
-        life = 5;
+        life = 1;
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -30,6 +31,9 @@ public class Enemy : MonoBehaviour
         return;
         switch (curreState)
         {
+            case EnemyState.Idle:
+                Idle();
+                break;
             case EnemyState.Wander:
                 Wander();
                 break;
@@ -40,13 +44,17 @@ public class Enemy : MonoBehaviour
                 // Death();
                 break;
         }
-        if (isPlayerInRange(range))
-        {
-            curreState = EnemyState.Follow;
-        }
-        else
-        {
-            curreState = EnemyState.Wander;
+        if (!notInRoom){
+            if (isPlayerInRange(range))
+            {
+                curreState = EnemyState.Follow;
+            }
+            else
+            {
+                curreState = EnemyState.Wander;
+            }
+        } else {
+            curreState = EnemyState.Idle;
         }
     }
 
@@ -55,6 +63,9 @@ public class Enemy : MonoBehaviour
         return Vector2.Distance(transform.position, player.transform.position) < range;
     }
 
+    void Idle()
+    {
+    }
 
     void Wander()
     {
@@ -112,8 +123,8 @@ public class Enemy : MonoBehaviour
             life--;
             if (life <= 0)
             {
-            curreState = EnemyState.Dead;   
-            animator.SetBool("BlDeath", true);
+                curreState = EnemyState.Dead;   
+                animator.SetBool("BlDeath", true);
             }
             
         }  
@@ -126,6 +137,7 @@ public class Enemy : MonoBehaviour
 
     void Death()
     {
+        RoomController.instance.StartCoroutine(RoomController.instance.RoomCoroutine());
         Destroy(gameObject);
         GameManager.instance.AddPoint(1);
     }

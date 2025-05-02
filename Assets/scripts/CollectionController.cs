@@ -29,11 +29,11 @@ public class CollectionController : MonoBehaviour
         if(collision.tag == "Player")
         {
             IsaacController.collectedAmount++;
-            GameManager.instance.HealPlayer(healthChange);
-            GameManager.instance.MoveSpeedChange(moveSpeedChange);
-            GameManager.instance.FireRateChange(attackSpeedChange);
-            GameManager.instance.BulletSizeChange(bulletSizeChange);
-            // GameManager.instance.UpdateCollectedItems(this);
+            GameManager.HealPlayer(healthChange);
+            GameManager.MoveSpeedChange(moveSpeedChange);
+            GameManager.FireRateChange(attackSpeedChange);
+            GameManager.BulletSizeChange(bulletSizeChange);
+            GameManager.instance.UpdateCollectedItems(this);
             Destroy(gameObject);
         }
     }
