@@ -68,16 +68,104 @@ public class Room : MonoBehaviour
             switch (door.doorType)
             {
                 case Door.DoorType.left:
-                    if (GetLeftRoom() == null) door.gameObject.SetActive(false);
+                    if (GetLeftRoom() == null)
+                    {
+                        door.gameObject.SetActive(false);
+
+                        if (door.InvisibleWall != null)
+                        {
+                            door.InvisibleWall.SetActive(true);
+
+                            Collider2D wallCollider = door.InvisibleWall.GetComponent<Collider2D>();
+                            if (wallCollider != null)
+                            {
+                                wallCollider.isTrigger = false;
+                            }
+                            else
+                            {
+                                Debug.LogWarning($"La InvisibleWall de la puerta '{door.doorType}' no tiene un Collider2D.");
+                            }
+                        }
+                        else
+                        {
+                            Debug.LogWarning($"InvisibleWall no está asignado en la puerta '{door.doorType}'.");
+                        }
+                    }
                     break;
                 case Door.DoorType.right:
-                    if (GetRightRoom() == null) door.gameObject.SetActive(false);
+                    if (GetRightRoom() == null)
+                    {
+                        door.gameObject.SetActive(false);
+
+                        if (door.InvisibleWall != null)
+                        {
+                            door.InvisibleWall.SetActive(true);
+
+                            Collider2D wallCollider = door.InvisibleWall.GetComponent<Collider2D>();
+                            if (wallCollider != null)
+                            {
+                                wallCollider.isTrigger = false;
+                            }
+                            else
+                            {
+                                Debug.LogWarning($"La InvisibleWall de la puerta '{door.doorType}' no tiene un Collider2D.");
+                            }
+                        }
+                        else
+                        {
+                            Debug.LogWarning($"InvisibleWall no está asignado en la puerta '{door.doorType}'.");
+                        }
+                    }
                     break;
                 case Door.DoorType.top:
-                    if (GetTopRoom() == null) door.gameObject.SetActive(false);
+                    if (GetTopRoom() == null)
+                    {
+                        door.gameObject.SetActive(false);
+
+                        if (door.InvisibleWall != null)
+                        {
+                            door.InvisibleWall.SetActive(true);
+
+                            Collider2D wallCollider = door.InvisibleWall.GetComponent<Collider2D>();
+                            if (wallCollider != null)
+                            {
+                                wallCollider.isTrigger = false;
+                            }
+                            else
+                            {
+                                Debug.LogWarning($"La InvisibleWall de la puerta '{door.doorType}' no tiene un Collider2D.");
+                            }
+                        }
+                        else
+                        {
+                            Debug.LogWarning($"InvisibleWall no está asignado en la puerta '{door.doorType}'.");
+                        }
+                    }
                     break;
                 case Door.DoorType.bottom:
-                    if (GetBottomRoom() == null) door.gameObject.SetActive(false);
+                    if (GetBottomRoom() == null)
+                    {
+                        door.gameObject.SetActive(false);
+
+                        if (door.InvisibleWall != null)
+                        {
+                            door.InvisibleWall.SetActive(true);
+
+                            Collider2D wallCollider = door.InvisibleWall.GetComponent<Collider2D>();
+                            if (wallCollider != null)
+                            {
+                                wallCollider.isTrigger = false;
+                            }
+                            else
+                            {
+                                Debug.LogWarning($"La InvisibleWall de la puerta '{door.doorType}' no tiene un Collider2D.");
+                            }
+                        }
+                        else
+                        {
+                            Debug.LogWarning($"InvisibleWall no está asignado en la puerta '{door.doorType}'.");
+                        }
+                    }
                     break;
             }
         }

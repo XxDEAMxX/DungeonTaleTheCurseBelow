@@ -159,11 +159,13 @@ public class RoomController : MonoBehaviour{
                         enemy.notInRoom = true;
                         Debug.Log("Enemy notInRoom: " + enemy.name);
                     }
-                    foreach (Door door in room.GetComponentsInChildren<Door>()) {
+                    foreach (Door door in room.GetComponentsInChildren<Door>())
+                    {
                         door.doorCollider.SetActive(false);
                     }
                 } else {
-                    foreach (Door door in room.GetComponentsInChildren<Door>()) {
+                    foreach (Door door in room.GetComponentsInChildren<Door>())
+                    {
                         door.doorCollider.SetActive(false);
                     }
                 }
@@ -178,7 +180,8 @@ public class RoomController : MonoBehaviour{
                         door.doorCollider.SetActive(true);
                     }
                 } else {
-                    foreach (Door door in room.GetComponentsInChildren<Door>()) {
+                    foreach (Door door in room.GetComponentsInChildren<Door>())
+                    {
                         door.doorCollider.SetActive(false);
                     }
                 }
