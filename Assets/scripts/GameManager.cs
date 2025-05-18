@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     private static float moveSpeed = 3f;
     private static float fireRate = 0.2f;
     private static float bulletSize = 2f;
-    public static int Health { get => health;  set => health = value; }
+    public static int Health { get => health; set => health = value; }
     public static int MaxHealth { get => maxHealth; set => maxHealth = value; }
     public static float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
     public static float FireRate { get => fireRate; set => fireRate = value; }
@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
     private bool bootCollected = false;
     private bool screwCollected = false;
     public List<string> collectedItems = new List<string>();
-
-
+    private GameObject menu;
+    private bool isPaused = false;
 
 
     public HUD hud;
@@ -35,8 +35,30 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        menu = GameObject.FindGameObjectWithTag("Menu");
+        menu.SetActive(false);
+        
         hud.UpdateNumbBombs(numbBombs);
         IsaacController.instance.SetBombs(numbBombs);
+    }
+
+   void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && IsaacController.instance.isDeath == false)
+        {
+            Debug.Log("Escape pressed");
+            TogglePauseMenu();
+        }
+    }
+
+    private void TogglePauseMenu()
+    {
+        if (menu == null) return;
+
+        isPaused = !isPaused;
+
+        menu.SetActive(isPaused);
+        Time.timeScale = isPaused ? 0 : 1;
     }
 
     void Awake()
@@ -56,7 +78,7 @@ public class GameManager : MonoBehaviour
         hud.UpdateScore(point);
     }
 
-       public void UpdateLifeCount(int count)
+    public void UpdateLifeCount(int count)
     {
         health = count;
         hud.UpdateLife(health);
@@ -64,13 +86,14 @@ public class GameManager : MonoBehaviour
     public void DecreaseLife(Vector2 position)
     {
         if (health > 0)
-        {   
+        {
             IsaacController.instance.Damage(position);
             health--;
             hud.UpdateLife(health);
             if (health == 0)
             {
                 IsaacController.instance.Death();
+                menu.SetActive(true);
             }
         }
     }
@@ -138,11 +161,11 @@ public class GameManager : MonoBehaviour
         // hud.UpdateBulletSize(bulletSize);
     }
 
-//Sinergias
+    //Sinergias
     public void UpdateCollectedItems(CollectionController item)
     {
         collectedItems.Add(item.item.name);
-        
+
         foreach (var i in collectedItems)
         {
             switch (i)
@@ -161,5 +184,16 @@ public class GameManager : MonoBehaviour
             FireRateChange(0.25f);
         }
         // hud.UpdateCollectedItems(collectedItems);
+    }
+
+    public void RestartGame()
+    {
+        isPaused = !isPaused;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+    }
+    
+    public void BackMenu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }

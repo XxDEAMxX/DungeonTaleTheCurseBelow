@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scene/DungeonRooms/BasementStart.unity
-    guid: ab2b19448500ea741bfcd555501215c7
+    path: Assets/Scene/MenuInit.unity
+    guid: 01986098e3956694baead6b468ed0654
   - enabled: 1
     path: Assets/Scene/DungeonRooms/BasementMain.unity
     guid: 42d1906292c155d488962a36842a16b5
+  - enabled: 1
+    path: Assets/Scene/DungeonRooms/BasementStart.unity
+    guid: ab2b19448500ea741bfcd555501215c7
   - enabled: 1
     path: Assets/Scene/DungeonRooms/BasementEmpty.unity
     guid: cbf3ecddf4cb4724aa452872229c673c

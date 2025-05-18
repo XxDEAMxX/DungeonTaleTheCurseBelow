@@ -19,7 +19,7 @@ public class IsaacController : MonoBehaviour
   public GameObject hair;
   public GameObject death;
   private bool isDamage = false;
-  private bool isDeath = false;
+  public bool isDeath = false;
   public float bulletSpeed = 20f; // Velocidad de la bala
   public float fireDelay = 0.2f; // Delay entre disparos
   public float bombDelay = 5f; // Delay entre bombas

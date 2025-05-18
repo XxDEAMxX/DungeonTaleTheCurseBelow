@@ -139,10 +139,23 @@ public class RoomController : MonoBehaviour{
     }
 
 
-    public void OnPlayerEnterRoom(Room room) {
+    public void OnPlayerEnterRoom(Room room)
+    {
         CameraController.instance.currRoom = room;
         currRoom = room;
         StartCoroutine(RoomCoroutine());
+        if (room.name.Contains("End"))
+        {
+            TheAdversaryController boss = room.GetComponentInChildren<TheAdversaryController>();
+            if (boss != null)
+            {
+                boss.notInRoom = true;
+            }
+            else
+            {
+                Debug.Log("Ta vaina nose porque no existe");
+            }
+        }
     }
 
     public IEnumerator RoomCoroutine(){
@@ -154,8 +167,10 @@ public class RoomController : MonoBehaviour{
         foreach (Room room in loadedRooms) {
             if (room != currRoom) {
                 Enemy[] enemies = room.GetComponentsInChildren<Enemy>();
-                if (enemies != null) {
-                    foreach (Enemy enemy in enemies) {
+                if (enemies != null)
+                {
+                    foreach (Enemy enemy in enemies)
+                    {
                         enemy.notInRoom = true;
                         Debug.Log("Enemy notInRoom: " + enemy.name);
                     }
@@ -163,7 +178,9 @@ public class RoomController : MonoBehaviour{
                     {
                         door.doorCollider.SetActive(false);
                     }
-                } else {
+                }
+                else
+                {
                     foreach (Door door in room.GetComponentsInChildren<Door>())
                     {
                         door.doorCollider.SetActive(false);
