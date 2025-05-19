@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5277813025545460032}
   m_Layer: 0
   m_Name: The Adversary
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,6 +109,7 @@ MonoBehaviour:
   notInRoom: 0
   childPrefab: {fileID: 6231968233347038806, guid: da73771879a1c934a802fbb734216b86, type: 3}
   spawnPoint: {fileID: 7638148992471934160}
+  maxChildren: 10
 --- !u!95 &4466980216821116222
 Animator:
   serializedVersion: 7
@@ -147,6 +148,7 @@ MonoBehaviour:
   notInRoom: 0
   childPrefab: {fileID: 0}
   spawnPoint: {fileID: 0}
+  maxChildren: 10
 --- !u!61 &7024658583683440847
 BoxCollider2D:
   m_ObjectHideFlags: 0

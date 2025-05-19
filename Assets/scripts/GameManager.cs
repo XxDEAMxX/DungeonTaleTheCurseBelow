@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && IsaacController.instance.isDeath == false)
         {
-            Debug.Log("Escape pressed");
             TogglePauseMenu();
         }
     }
@@ -188,7 +187,8 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        isPaused = !isPaused;
+        isPaused = false;
+        Time.timeScale = 1;
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
     

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public enum TheAdversaryState { Init, Idle, Attack, Follow, Dead };
+public enum TheAdversaryState { Init, Idle, Attack, Follow, Dead, GenerateChild };
 
 public class TheAdversaryController : MonoBehaviour
 {
@@ -36,23 +36,15 @@ public class TheAdversaryController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(curreState);
-
+        Debug.Log("Current State: " + curreState);
         if (curreState == TheAdversaryState.Dead)
             return;
 
-        if (curreState != TheAdversaryState.Dead &&
-            curreState != TheAdversaryState.Attack &&
-            curreState != TheAdversaryState.Follow &&
-            curreState != TheAdversaryState.Init && !isInitFinish)
+        if (!isInitFinish && notInRoom)
         {
-            if (notInRoom && curreState != TheAdversaryState.Init)
-            {
-                curreState = TheAdversaryState.Init;
-                isInitFinish = true;
-            }
-            else
-                curreState = TheAdversaryState.Idle;
+            Debug.Log("Solo one");
+            curreState = TheAdversaryState.Init;
+            isInitFinish = true;
         }
 
         switch (curreState)
@@ -64,13 +56,15 @@ public class TheAdversaryController : MonoBehaviour
                 Init();
                 break;
             case TheAdversaryState.Attack:
-                Attack();
                 break;
             case TheAdversaryState.Follow:
                 Follow();
                 break;
             case TheAdversaryState.Dead:
                 // Death();
+                break;
+            case TheAdversaryState.GenerateChild:
+                // generateSingleChild();
                 break;
         }
     }
@@ -92,11 +86,10 @@ public class TheAdversaryController : MonoBehaviour
     {
         if (childPrefab != null && spawnPoint != null && currentChildren < maxChildren)
         {
+            curreState = TheAdversaryState.GenerateChild;
+            animator.SetBool("isGenerateChild", true);
             animator.SetBool("isIdle", false);
             animator.SetBool("isAttack", false);
-            animator.SetBool("isGenerateChild", true);
-            animator.SetBool("isAttackUp", false);
-            animator.SetBool("isAttackDown", false);
             animator.SetBool("isInit", false);
 
             Vector2 spawnOffset = Random.insideUnitCircle * 0.5f;
@@ -104,8 +97,6 @@ public class TheAdversaryController : MonoBehaviour
 
             Instantiate(childPrefab, spawnPosition, Quaternion.identity);
             currentChildren++;
-
-            Debug.Log($"1 hijo generado. Total: {currentChildren}");
         }
     }
 
@@ -114,7 +105,7 @@ public class TheAdversaryController : MonoBehaviour
         while (curreState != TheAdversaryState.Dead)
         {
             //Todo: rando
-            float randomInterval = Random.Range(0f, 7f); // tiempo aleatorio entre 0 y 7 segundos
+            float randomInterval = Random.Range(0f, 7f);
             yield return new WaitForSeconds(randomInterval);
 
             if (currentChildren < maxChildren)
@@ -130,43 +121,15 @@ public class TheAdversaryController : MonoBehaviour
         animator.SetBool("isIdle", true);
         animator.SetBool("isAttack", false);
         animator.SetBool("isGenerateChild", false);
-        animator.SetBool("isAttackUp", false);
-        animator.SetBool("isAttackDown", false);
         animator.SetBool("isInit", false);
     }
 
-    private void Attack()
+    public void toFollow()
     {
+        animator.SetBool("isInit", false);
         animator.SetBool("isIdle", false);
         animator.SetBool("isAttack", true);
         animator.SetBool("isGenerateChild", false);
-        animator.SetBool("isInit", false);
-
-        if (player.transform.position.y > transform.position.y)
-        {
-            animator.SetBool("isAttackUp", true);
-            animator.SetBool("isAttackDown", false);
-        }
-        else if (player.transform.position.y < transform.position.y)
-        {
-            animator.SetBool("isAttackDown", true);
-            animator.SetBool("isAttackUp", false);
-        }
-        else
-        {
-            animator.SetBool("isAttackUp", false);
-            animator.SetBool("isAttackDown", false);
-        }
-    }
-
-    public void toIdle()
-    {
-        animator.SetBool("isInit", false);
-        animator.SetBool("isIdle", true);
-        animator.SetBool("isAttack", false);
-        animator.SetBool("isGenerateChild", false);
-        animator.SetBool("isAttackUp", false);
-        animator.SetBool("isAttackDown", false);
         curreState = TheAdversaryState.Follow;
     }
 
@@ -176,8 +139,6 @@ public class TheAdversaryController : MonoBehaviour
         animator.SetBool("isIdle", false);
         animator.SetBool("isAttack", false);
         animator.SetBool("isGenerateChild", false);
-        animator.SetBool("isAttackUp", false);
-        animator.SetBool("isAttackDown", false);
 
         if (!hasStartedChildGeneration)
         {
@@ -188,14 +149,15 @@ public class TheAdversaryController : MonoBehaviour
 
     private void Follow()
     {
-        animator.SetBool("isIdle", true);
-        animator.SetBool("isAttack", false);
+        animator.SetBool("isIdle", false);
+        animator.SetBool("isAttack", true);
         animator.SetBool("isGenerateChild", false);
-        animator.SetBool("isAttackUp", false);
-        animator.SetBool("isAttackDown", false);
         animator.SetBool("isInit", false);
         Vector2 direction = (player.transform.position - transform.position).normalized;
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        // Rotar hacia el jugador (considerando que el sprite mira hacia abajo por defecto)
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, angle + 90 ); // -90 porque el sprite mira hacia abajo
     }
 
     void OnTriggerEnter2D(Collider2D collision)

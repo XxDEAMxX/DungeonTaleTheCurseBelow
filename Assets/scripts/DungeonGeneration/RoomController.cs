@@ -22,13 +22,48 @@ public class RoomController : MonoBehaviour{
     bool updatedRooms = false;
     bool spawnedBossRoom = false;
     bool bossRoomLoaded = false;
-    void Start() {
+
+    private GameObject load;
+    public float fadeDuration = 3f;
+    void Start()
+    {
         // LoadRoom("Start", 0, 0);
         // LoadRoom("Empty", 1, 0);
         // LoadRoom("Empty", -1, 0);
         // LoadRoom("Empty", 0, 1);
         // LoadRoom("Empty", 0, -1);}
+        load = GameObject.FindGameObjectWithTag("Load");
     }
+
+    public void FadeOutAndDisable()
+    {
+        StartCoroutine(FadeOutCoroutine());
+    }
+
+
+    private IEnumerator FadeOutCoroutine()
+    {
+        CanvasGroup canvasGroup = load.GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+        {
+            canvasGroup = load.AddComponent<CanvasGroup>();
+        }
+
+        float startAlpha = canvasGroup.alpha;
+        float elapsed = 0f;
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            canvasGroup.alpha = Mathf.Lerp(startAlpha, 0f, elapsed / fadeDuration);
+            yield return null;
+        }
+
+        canvasGroup.alpha = 0f;
+        load.SetActive(false); 
+    }
+
+
 
     void Update() {
         UpdateRoomQueue();
@@ -48,6 +83,7 @@ public class RoomController : MonoBehaviour{
         }
         UpdateRooms();
         updatedRooms = true;
+        FadeOutAndDisable();
         Debug.Log("RemoveUnconnectedDoors ejecutado en todas las habitaciones, incluyendo la del jefe.");
     }
     return;
@@ -191,7 +227,6 @@ public class RoomController : MonoBehaviour{
                 if (enemies.Length > 0) {
                     foreach (Enemy enemy in enemies) {
                         enemy.notInRoom = false;
-                        Debug.Log("Enemy InRoom: " + enemy.name);
                     }
                     foreach (Door door in room.GetComponentsInChildren<Door>()) {
                         door.doorCollider.SetActive(true);

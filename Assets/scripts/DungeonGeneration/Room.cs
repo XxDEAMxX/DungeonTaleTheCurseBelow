@@ -218,10 +218,8 @@ public class Room : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player entered room: " + gameObject.name);
+            // Debug.Log("Player entered room: " + gameObject.name);
             RoomController.instance.OnPlayerEnterRoom(this);
-            // CameraController.instance.currRoom = this;
-            // CameraController.instance.UpdatePosition();
         }
     }
     
