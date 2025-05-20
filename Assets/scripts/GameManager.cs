@@ -20,14 +20,16 @@ public class GameManager : MonoBehaviour
     private bool screwCollected = false;
     public List<string> collectedItems = new List<string>();
     private GameObject menu;
+    private GameObject win;
+    private GameObject winText;
     private bool isPaused = false;
 
 
     public HUD hud;
     public int Point { get { return point; } }
-    private bool redSyringeCollected = false;
-    private bool greenSyringeCollected = false;
-    private bool bigEyeSyringeCollected = false;
+    // private bool redSyringeCollected = false;
+    // private bool greenSyringeCollected = false;
+    // private bool bigEyeSyringeCollected = false;
     public List<string> collectedNames = new List<string>();
     private int point;
     public int NumbBombs { get { return numbBombs; } }
@@ -36,13 +38,17 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         menu = GameObject.FindGameObjectWithTag("Menu");
+        win = GameObject.FindGameObjectWithTag("Win");
+        winText = GameObject.FindGameObjectWithTag("WinText");
+        winText.SetActive(false);
         menu.SetActive(false);
-        
+        win.SetActive(false);
+
         hud.UpdateNumbBombs(numbBombs);
         IsaacController.instance.SetBombs(numbBombs);
     }
 
-   void Update()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && IsaacController.instance.isDeath == false)
         {
@@ -191,9 +197,17 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
-    
+
     public void BackMenu()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
+
+    public void WinGame()
+    {
+        Debug.Log("You win");
+        win.SetActive(true);
+        winText.SetActive(true);
+        // GameObject.FindGameObjectWithTag("Player").GetComponent<IsaacController>().enabled = false;
     }
 }

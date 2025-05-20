@@ -15,6 +15,9 @@ TagManager:
   - Death
   - Menu
   - Load
+  - Tran
+  - Win
+  - WinText
   layers:
   - Default
   - TransparentFX

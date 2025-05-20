@@ -186,6 +186,10 @@ public class RoomController : MonoBehaviour{
             if (boss != null)
             {
                 boss.notInRoom = true;
+                // foreach (Door door in room.GetComponentsInChildren<Door>())
+                // {
+                //     door.doorCollider.SetActive(true);
+                // }
             }
             else
             {
@@ -224,7 +228,7 @@ public class RoomController : MonoBehaviour{
                 }
             }else {
                 Enemy[] enemies = room.GetComponentsInChildren<Enemy>();
-                if (enemies.Length > 0) {
+                if (enemies.Length > 0 || room.name.Contains("End")) {
                     foreach (Enemy enemy in enemies) {
                         enemy.notInRoom = false;
                     }

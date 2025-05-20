@@ -1096,6 +1096,8 @@ MonoBehaviour:
     spawnerData: {fileID: 11400000, guid: 72d69d46c837cc34ebf840e2ecbeaffe, type: 2}
   - name: RandomItemSpawner
     spawnerData: {fileID: 11400000, guid: 18b6b3289a5a9d641be86defce2a5729, type: 2}
+  - name: ChanseHort
+    spawnerData: {fileID: 11400000, guid: a37b6788e42e1a247bd4aeceafbb50ee, type: 2}
 --- !u!1 &894425034
 GameObject:
   m_ObjectHideFlags: 0

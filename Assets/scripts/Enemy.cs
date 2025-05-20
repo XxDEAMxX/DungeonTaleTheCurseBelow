@@ -123,6 +123,7 @@ public class Enemy : MonoBehaviour
             life--;
             if (life <= 0)
             {
+                GetComponent<BoxCollider2D>().isTrigger = true;
                 curreState = EnemyState.Dead;   
                 animator.SetBool("BlDeath", true);
             }

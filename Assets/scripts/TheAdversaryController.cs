@@ -1,12 +1,17 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 
 public enum TheAdversaryState { Init, Idle, Attack, Follow, Dead, GenerateChild };
 
 public class TheAdversaryController : MonoBehaviour
 {
+    public static TheAdversaryController instance;
+    void Awake() {
+            instance = this;
+    } 
     private int life;
     private Animator animator;
     private GameObject player;
@@ -14,6 +19,7 @@ public class TheAdversaryController : MonoBehaviour
     public float speed;
     public bool notInRoom = false;
     private bool isInitFinish = false;
+    private Rigidbody2D rb;
 
 
     public GameObject childPrefab; // Asigna el prefab del "hijo" desde el Inspector
@@ -24,11 +30,13 @@ public class TheAdversaryController : MonoBehaviour
 
     private int currentChildren = 0;
     public int maxChildren = 10;
+    public bool isGenerateChild = false;
 
 
     void Start()
     {
-        life = 100;
+        rb = GetComponent<Rigidbody2D>();
+        life = 2;
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(ProcessQueue());
@@ -64,9 +72,15 @@ public class TheAdversaryController : MonoBehaviour
                 // Death();
                 break;
             case TheAdversaryState.GenerateChild:
-                // generateSingleChild();
+                stop();
                 break;
         }
+    }
+
+    private void stop()
+    {
+        // rb.linearVelocity = Vector2.zero;
+        // rb.bodyType = RigidbodyType2D.Static;
     }
 
     IEnumerator ProcessQueue()
@@ -86,19 +100,27 @@ public class TheAdversaryController : MonoBehaviour
     {
         if (childPrefab != null && spawnPoint != null && currentChildren < maxChildren)
         {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+
+            rb.linearVelocity = Vector2.zero;
             curreState = TheAdversaryState.GenerateChild;
+            isGenerateChild = true;
             animator.SetBool("isGenerateChild", true);
             animator.SetBool("isIdle", false);
             animator.SetBool("isAttack", false);
             animator.SetBool("isInit", false);
-
-            Vector2 spawnOffset = Random.insideUnitCircle * 0.5f;
-            Vector3 spawnPosition = spawnPoint.position + (Vector3)spawnOffset;
-
-            Instantiate(childPrefab, spawnPosition, Quaternion.identity);
-            currentChildren++;
         }
     }
+
+    public void InitialChild()
+    {
+        Vector2 spawnOffset = Random.insideUnitCircle * 0.5f;
+        Vector3 spawnPosition = spawnPoint.position + (Vector3)spawnOffset;
+
+        Instantiate(childPrefab, spawnPosition, Quaternion.identity);
+        currentChildren++;        
+    }
+
 
     IEnumerator EnqueueChildGeneration()
     {
@@ -109,7 +131,9 @@ public class TheAdversaryController : MonoBehaviour
             yield return new WaitForSeconds(randomInterval);
 
             if (currentChildren < maxChildren)
-            {
+            { 
+                curreState = TheAdversaryState.GenerateChild;
+
                 generationQueue.Enqueue(() => generateSingleChild());
             }
         }
@@ -126,6 +150,7 @@ public class TheAdversaryController : MonoBehaviour
 
     public void toFollow()
     {
+        isGenerateChild = false; 
         animator.SetBool("isInit", false);
         animator.SetBool("isIdle", false);
         animator.SetBool("isAttack", true);
@@ -149,16 +174,22 @@ public class TheAdversaryController : MonoBehaviour
 
     private void Follow()
     {
+        if (curreState != TheAdversaryState.Follow && !isGenerateChild) return; // seguridad extra
+        // rb = rbTmp;
+
         animator.SetBool("isIdle", false);
         animator.SetBool("isAttack", true);
         animator.SetBool("isGenerateChild", false);
         animator.SetBool("isInit", false);
+
         Vector2 direction = (player.transform.position - transform.position).normalized;
+
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-        // Rotar hacia el jugador (considerando que el sprite mira hacia abajo por defecto)
+
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle + 90 ); // -90 porque el sprite mira hacia abajo
+        transform.rotation = Quaternion.Euler(0, 0, angle + 90f); // mirar hacia abajo
     }
+
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -167,8 +198,14 @@ public class TheAdversaryController : MonoBehaviour
             life--;
             if (life <= 0)
             {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+                rb.linearVelocity = Vector2.zero;
+                GetComponent<BoxCollider2D>().isTrigger = true;
                 curreState = TheAdversaryState.Dead;
                 animator.SetBool("isDeath", true);
+                GameManager.instance.WinGame();
+                GameObject.FindGameObjectWithTag("Player").SetActive(false);
+                
             }
 
         }
@@ -179,7 +216,13 @@ public class TheAdversaryController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
+    public void setDead()
+    { 
+        animator.SetBool("isDead", true);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
         if (other.gameObject.CompareTag("Player"))
         {
             Vector2 rawDir = (other.transform.position - transform.position);

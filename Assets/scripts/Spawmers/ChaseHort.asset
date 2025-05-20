@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c87eaf8568ef8a44897c4f741f028ff8, type: 3}
+  m_Name: ChaseHort
+  m_EditorClassIdentifier: 
+  itemToSpawn: {fileID: 643013352267145060, guid: c49dd538a0b31594e9a44bdabc6ec234, type: 3}
+  minSpawn: 2
+  maxSpawn: 5
