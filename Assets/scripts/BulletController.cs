@@ -20,11 +20,14 @@ public class BulletController : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         if (!isEnemyBullet)
-        { 
+        {
             transform.localScale = new Vector2(GameManager.BulletSize, GameManager.BulletSize);
         }
+        else
+        { 
+            transform.localScale = new Vector2(2f, 2f);   
+        }
         StartCoroutine(DeathDelay()); 
-        transform.localScale = new Vector3(GameManager.BulletSize, GameManager.BulletSize, 1);
     }
 
     void Update()

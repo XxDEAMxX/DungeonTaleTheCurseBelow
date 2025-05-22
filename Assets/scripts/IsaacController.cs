@@ -13,6 +13,7 @@ public class IsaacController : MonoBehaviour
   private Animator animatorHead;
   private Animator animatorHair;
   public GameObject bulletPrefab;
+  public GameObject bulletSidaPrefab;
   public GameObject bombPrefab;
   public GameObject body;
   public GameObject head;
@@ -123,7 +124,10 @@ public class IsaacController : MonoBehaviour
   void shoot(float x, float y)
   {
       isShooting = true;
-      GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+      int ran = Random.Range(0, 2);
+      Debug.Log(ran);
+      GameObject bull = ran == 0 ? bulletPrefab : bulletSidaPrefab;
+      GameObject bullet = Instantiate(bull, transform.position, Quaternion.identity);
       Rigidbody2D rb = bullet.AddComponent<Rigidbody2D>();
       rb.gravityScale = 0;
 

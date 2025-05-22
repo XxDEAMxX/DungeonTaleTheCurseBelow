@@ -4,8 +4,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
-    private static int health = 3;
-    private static int maxHealth = 5;
+    private static int health = 10;
+    private static int maxHealth = 10;
     private static float moveSpeed = 3f;
     private static float fireRate = 1f;
     private static float bulletSize = 2f;
@@ -199,8 +199,8 @@ public class GameManager : MonoBehaviour
 
     public void ResetState()
     {
-        health = 3;
-        maxHealth = 5;
+        health = 10;
+        maxHealth = 10;
         moveSpeed = 3f;
         fireRate = 1f;
         bulletSize = 2f;

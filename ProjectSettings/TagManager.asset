@@ -18,6 +18,7 @@ TagManager:
   - Tran
   - Win
   - WinText
+  - BulletSida
   layers:
   - Default
   - TransparentFX

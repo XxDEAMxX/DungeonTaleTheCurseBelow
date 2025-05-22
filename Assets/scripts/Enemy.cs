@@ -31,8 +31,16 @@ public class Enemy : MonoBehaviour
     private float lastDamageTime = -999f;
 
     void Start()
-    {   
-        life = 1;
+    { 
+        switch (enemyType)
+        {
+            case EnemyType.Melee:
+                life = 3;
+                break;
+            case EnemyType.Ranged:
+                life = 5;
+                break;
+        }  
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -211,9 +219,14 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Sword") || collision.CompareTag("Bullet"))
+        if (collision.CompareTag("BulletSida") || collision.CompareTag("Bullet"))
         {
-            life--;
+            if (collision.CompareTag("Bullet"))
+            {
+                life--;
+            } else {
+                life = life - 2;
+            } 
             if (life <= 0)
             {
                 GetComponent<BoxCollider2D>().isTrigger = true;
