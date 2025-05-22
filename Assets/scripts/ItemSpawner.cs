@@ -21,7 +21,7 @@ public class ItemController: MonoBehaviour
 
     void Start()
     {
-        float pick = Random.value * totalWeight;	
+        float pick = UnityEngine.Random.value * totalWeight;	
         int chosenIndex = 0;
         float cumulatgiveWeight = items[0].weight;
 

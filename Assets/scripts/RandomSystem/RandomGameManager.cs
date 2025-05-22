@@ -38,7 +38,7 @@ public class RandomGameManager : MonoBehaviour
 
         if (initializeCustomRandom)
         {
-            if (FindObjectOfType<CustomRandom>() == null)
+            if (Object.FindFirstObjectByType<CustomRandom>() == null)
             {
                 GameObject crObj = new GameObject("CustomRandom_ManagedInstance");
                 crObj.AddComponent<CustomRandom>(); 
@@ -49,7 +49,7 @@ public class RandomGameManager : MonoBehaviour
 
         if (initializeRandomMatrix)
         {
-            if (FindObjectOfType<RandomMatrix>() == null)
+            if (Object.FindFirstObjectByType<RandomMatrix>() == null)
             {
                 GameObject rmObj = new GameObject("RandomMatrix_ManagedInstance");
                 RandomMatrix matrixInstance = rmObj.AddComponent<RandomMatrix>();
@@ -62,7 +62,7 @@ public class RandomGameManager : MonoBehaviour
 
         if (initializeOptimizedRandom)
         {
-            if (FindObjectOfType<OptimizedRandom>() == null)
+            if (Object.FindFirstObjectByType<OptimizedRandom>() == null)
             {
                 GameObject orObj = new GameObject("OptimizedRandom_ManagedInstance");
                 OptimizedRandom optimizedInstance = orObj.AddComponent<OptimizedRandom>();
@@ -73,7 +73,7 @@ public class RandomGameManager : MonoBehaviour
 
         if (validateOnStart && randomQualityMonitorPrefab != null)
         {
-            if (FindObjectOfType<RandomQualityMonitor>() == null)
+            if (Object.FindFirstObjectByType<RandomQualityMonitor>() == null)
             {
                 Instantiate(randomQualityMonitorPrefab);
                 Debug.Log("RandomQualityMonitor instanciado para validación.");
