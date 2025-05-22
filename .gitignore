@@ -19,6 +19,7 @@ MemoryCaptures/
 *.opendb
 *.VC.db
 .vscode/
+.vsconfig
 .idea/
 .DS_Store
 Thumbs.db
