@@ -135,7 +135,8 @@ namespace RandomModels.StatisticalTests
             else
             {
                 // Aproximación para grados de libertad mayores
-                criticalValue = degreesOfFreedom + 1.64f * Math.Sqrt(2 * degreesOfFreedom);
+                // Asegurarse de que el resultado de Math.Sqrt (que es double) se convierta a float
+                criticalValue = degreesOfFreedom + 1.64f * (float)Math.Sqrt(2 * degreesOfFreedom); // <--- CAST AÑADIDO AQUÍ
             }
         }
 
