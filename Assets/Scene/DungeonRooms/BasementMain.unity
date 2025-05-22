@@ -289,6 +289,67 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1009885780}
   m_SourcePrefab: {fileID: 100100000, guid: d3c01f225da38c742839efdd06d28fc7, type: 3}
+--- !u!1 &357271323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 357271325}
+  - component: {fileID: 357271324}
+  m_Layer: 0
+  m_Name: RandomManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &357271324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357271323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5313a97d65cd9d444abbf2264ad08b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseSeed: 12345
+  pools:
+  - poolName: General
+    size: 2000
+    values: []
+  - poolName: Combat
+    size: 5000
+    values: []
+  - poolName: Loot
+    size: 3000
+    values: []
+  - poolName: EnemyMovement
+    size: 5000
+    values: []
+  - poolName: Spawner
+    size: 3000
+    values: []
+--- !u!4 &357271325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357271323}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9800068, y: 0.1823268, z: 0.054242276}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &417429681
 GameObject:
   m_ObjectHideFlags: 0
@@ -3060,3 +3121,4 @@ SceneRoots:
   - {fileID: 1088322597}
   - {fileID: 984749567}
   - {fileID: 1152456978}
+  - {fileID: 357271325}
