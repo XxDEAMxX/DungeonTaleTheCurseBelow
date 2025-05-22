@@ -137,8 +137,8 @@ public class Enemy : MonoBehaviour
                 //Todo: Random
                 // Empezar a moverse
                 isWaiting = false;
-                randomDirection = new Vector2(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)).normalized;
-                wanderTimer = UnityEngine.Random.Range(1f, 2f); // duración del movimiento
+                randomDirection = EnemyRandomExtension.GetRandomDirection();
+                wanderTimer = EnemyRandomExtension.GetWanderTime(); // duración del movimiento
             }
             return; // No moverse mientras espera
         }
@@ -151,7 +151,7 @@ public class Enemy : MonoBehaviour
         {
             // Detenerse y esperar
             isWaiting = true;
-            waitTimer = UnityEngine.Random.Range(0.5f, 1.5f); // tiempo quieto
+            waitTimer = EnemyRandomExtension.GetWaitTime(); // tiempo quieto
         }
 
         if (isPlayerInRange(range))
