@@ -24,6 +24,7 @@ public class MenuInit : MonoBehaviour
         // Inicia la transición
         tran.SetActive(true);
         StartCoroutine(FadeToBlackAndLoadScene());
+        GameManager.instance.ResetState();
     }
 
     public void Exit()

@@ -1120,6 +1120,8 @@ MonoBehaviour:
     spawnerData: {fileID: 11400000, guid: 18b6b3289a5a9d641be86defce2a5729, type: 2}
   - name: ChaseHort
     spawnerData: {fileID: 11400000, guid: a37b6788e42e1a247bd4aeceafbb50ee, type: 2}
+  - name: ChaseMoney
+    spawnerData: {fileID: 11400000, guid: 0af39028d00bdf345bc0b78be2977beb, type: 2}
 --- !u!1 &995087662
 GameObject:
   m_ObjectHideFlags: 0

@@ -140,17 +140,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb704643261316dcca10fe609757ce14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 5
+  speed: 0
   bulletPrefab: {fileID: 3109314803948305786, guid: 9574d14b03c11c249a78f63f1705046c, type: 3}
   bombPrefab: {fileID: 1530208660066186215, guid: c240402cd145b994e80a4e2abef9d4d1, type: 3}
   body: {fileID: 0}
   head: {fileID: 0}
   hair: {fileID: 0}
   death: {fileID: 0}
+  isDeath: 0
   bulletSpeed: 5
   fireDelay: 0.2
   bombDelay: 5
   groundCheck: {fileID: 6632621984839224430}
+  collectedText: {fileID: 0}
 --- !u!50 &6734205250139139206
 Rigidbody2D:
   serializedVersion: 5
@@ -378,7 +380,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 9135563362665789592, guid: 64d98f0c0957556649fcf046ef45740c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -500,7 +502,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 4734527905769891556, guid: 64d98f0c0957556649fcf046ef45740c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -641,7 +643,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 4386988838182772092, guid: 64d98f0c0957556649fcf046ef45740c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

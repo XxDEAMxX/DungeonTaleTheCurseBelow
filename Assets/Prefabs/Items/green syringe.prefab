@@ -107,4 +107,4 @@ MonoBehaviour:
   healthChange: 0
   moveSpeedChange: 0
   attackSpeedChange: 0
-  bulletSizeChange: 3
+  bulletSizeChange: 0.5

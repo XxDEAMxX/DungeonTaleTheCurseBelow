@@ -33,6 +33,16 @@ public class TheAdversaryController : MonoBehaviour
     public bool isGenerateChild = false;
 
 
+    
+    private bool canDealDamage = true;
+    private float damageCooldown = 1f; 
+
+    private bool isTouchingPlayer = false;
+    private float damageInterval = 1f;
+    private float damageTimer = 0f;
+    private float lastDamageTime = -999f;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -223,13 +233,47 @@ public class TheAdversaryController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        if (other.gameObject.CompareTag("Player") && canDealDamage)
+        {
+            Vector2 rawDir = (other.transform.position - transform.position);
+            Vector2 direction = Mathf.Abs(rawDir.x) > Mathf.Abs(rawDir.y)
+                ? new Vector2(Mathf.Sign(rawDir.x), 0)
+                : new Vector2(0, Mathf.Sign(rawDir.y));
+
+            GameManager.instance.DecreaseLife(direction);
+            StartCoroutine(DamageCooldown());
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
         if (other.gameObject.CompareTag("Player"))
         {
             Vector2 rawDir = (other.transform.position - transform.position);
             Vector2 direction = Mathf.Abs(rawDir.x) > Mathf.Abs(rawDir.y)
                 ? new Vector2(Mathf.Sign(rawDir.x), 0)
                 : new Vector2(0, Mathf.Sign(rawDir.y));
-            GameManager.instance.DecreaseLife(direction);
+            if (Time.time - lastDamageTime >= damageCooldown)
+            {
+                GameManager.instance.DecreaseLife(direction);
+                lastDamageTime = Time.time;
+            }
+        }
+    }
+
+    private IEnumerator DamageCooldown()
+    {
+        canDealDamage = false;
+        yield return new WaitForSeconds(damageCooldown);
+        canDealDamage = true;
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            isTouchingPlayer = false;
+            damageTimer = 0f;
         }
     }
     

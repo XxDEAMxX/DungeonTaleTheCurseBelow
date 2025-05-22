@@ -5,9 +5,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
     private static int health = 3;
-    private static int maxHealth = 10;
+    private static int maxHealth = 5;
     private static float moveSpeed = 3f;
-    private static float fireRate = 0.2f;
+    private static float fireRate = 1f;
     private static float bulletSize = 2f;
     public static int Health { get => health; set => health = value; }
     public static int MaxHealth { get => maxHealth; set => maxHealth = value; }
@@ -16,8 +16,8 @@ public class GameManager : MonoBehaviour
     public static float BulletSize { get => bulletSize; set => bulletSize = value; }
 
 
-    private bool bootCollected = false;
-    private bool screwCollected = false;
+    // private bool bootCollected = false;
+    // private bool screwCollected = false;
     public List<string> collectedItems = new List<string>();
     private GameObject menu;
     private GameObject win;
@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("vida: " + health);
+        Debug.Log(maxHealth);
         if (Input.GetKeyDown(KeyCode.Escape) && IsaacController.instance.isDeath == false)
         {
             TogglePauseMenu();
@@ -147,7 +149,11 @@ public class GameManager : MonoBehaviour
 
     public static void HealPlayer(int healthAmount)
     {
-        health += Mathf.Min(maxHealth, health + healthAmount);
+        health = Mathf.Min(maxHealth, health + healthAmount);
+        Debug.Log("health: " + health);
+        Debug.Log("healthAmount: " + healthAmount);
+        Debug.Log("maxHealth: " + maxHealth);
+        HUD.instance.UpdateLife(health);
     }
 
     public static void MoveSpeedChange(float value)
@@ -157,7 +163,7 @@ public class GameManager : MonoBehaviour
     }
     public static void FireRateChange(float value)
     {
-        fireRate += value;
+        fireRate -= value;
         // hud.UpdateFireRate(fireRate);
     }
     public static void BulletSizeChange(float value)
@@ -171,30 +177,54 @@ public class GameManager : MonoBehaviour
     {
         collectedItems.Add(item.item.name);
 
-        foreach (var i in collectedItems)
-        {
-            switch (i)
-            {
-                case "Boot":
-                    bootCollected = true;
-                    break;
-                case "Screw":
-                    screwCollected = true;
-                    break;
-            }
-        }
+        // foreach (var i in collectedItems)
+        // {
+        //     switch (i)
+        //     {
+        //         case "Boot":
+        //             bootCollected = true;
+        //             break;
+        //         case "Screw":
+        //             screwCollected = true;
+        //             break;
+        //     }
+        // }
 
-        if (bootCollected && screwCollected)
-        {
-            FireRateChange(0.25f);
-        }
+        // if (bootCollected && screwCollected)
+        // {
+        //     FireRateChange(0.25f);
+        // }
         // hud.UpdateCollectedItems(collectedItems);
     }
 
-    public void RestartGame()
+    public void ResetState()
     {
+        health = 3;
+        maxHealth = 5;
+        moveSpeed = 3f;
+        fireRate = 1f;
+        bulletSize = 2f;
+
+        point = 0;
+        numbBombs = 2;
+
+        // bootCollected = false;
+        // screwCollected = false;
+
+        collectedItems.Clear();
+        collectedNames.Clear();
+
         isPaused = false;
         Time.timeScale = 1;
+
+
+        // Opcional: reiniciar otros estados o llamar a HUD si necesario
+    }
+    
+
+    public void RestartGame()
+    {
+        ResetState();
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 

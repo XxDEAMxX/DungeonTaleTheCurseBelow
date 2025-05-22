@@ -105,6 +105,6 @@ MonoBehaviour:
     description: 
     itemImage: {fileID: 0}
   healthChange: 0
-  moveSpeedChange: 3
+  moveSpeedChange: 2
   attackSpeedChange: 0
   bulletSizeChange: 0

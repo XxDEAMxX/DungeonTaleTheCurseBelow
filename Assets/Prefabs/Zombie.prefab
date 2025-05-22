@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3826992915251760093}
   - component: {fileID: 4428594800387474621}
   - component: {fileID: 1106302282927167557}
-  - component: {fileID: 3066215791436928778}
   - component: {fileID: 7309442368835117688}
+  - component: {fileID: 3066215791436928778}
   - component: {fileID: 9204726989576247768}
   m_Layer: 0
   m_Name: Zombie
@@ -113,6 +113,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &7309442368835117688
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2464887148331148153}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 5
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &3066215791436928778
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159,33 +186,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.90491533, y: 1.1262461}
   m_EdgeRadius: 0
---- !u!50 &7309442368835117688
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2464887148331148153}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &9204726989576247768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,5 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8083f9cd9ea4a54bbaf3a3b5d7d5fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 0}
+  enemyType: 0
   range: 10
   speed: 1
+  notInRoom: 0

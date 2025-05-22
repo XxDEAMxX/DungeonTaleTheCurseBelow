@@ -4,6 +4,18 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
+    public static HUD instance { get; private set; }
+     void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI bombText;
     public GameObject[] vida;
