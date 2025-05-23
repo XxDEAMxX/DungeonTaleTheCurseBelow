@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 
@@ -18,6 +19,13 @@ public class MusicManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    IEnumerator Del()
+    {
+        yield return new WaitForSeconds(3f);
+        audioSource.Play();
+    }
+
     public AudioSource audioSource;
     public AudioClip musica1;
     public AudioClip musica2;
@@ -28,7 +36,6 @@ public class MusicManager : MonoBehaviour
 
     void Start()
     {
-
         if (!isBossMusic)
         {
             CambiarMusica(musica1);
@@ -37,6 +44,17 @@ public class MusicManager : MonoBehaviour
         {
             CambiarMusica(musica2);
         }
+    }
+
+    public void Init()
+    {
+        StartCoroutine(Del());
+    }
+
+
+    public void Stop()
+    {
+        audioSource.Stop();
     }
 
     void Update()
@@ -55,7 +73,6 @@ public class MusicManager : MonoBehaviour
     {
         if (audioSource.clip == nuevaMusica) return;
 
-        audioSource.Stop();
         audioSource.clip = nuevaMusica;
         audioSource.loop = true;
         audioSource.Play();

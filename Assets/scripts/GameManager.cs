@@ -216,8 +216,7 @@ public class GameManager : MonoBehaviour
 
         isPaused = false;
         Time.timeScale = 1;
-
-
+        MusicManager.instance.Init();
         // Opcional: reiniciar otros estados o llamar a HUD si necesario
     }
     
@@ -230,6 +229,7 @@ public class GameManager : MonoBehaviour
 
     public void BackMenu()
     {
+        MusicManager.instance.Stop();
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 
