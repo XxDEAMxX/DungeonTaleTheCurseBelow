@@ -21,6 +21,7 @@ public class BulletController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         if (!isEnemyBullet)
         {
+            lifeTime = 2.5f;
             transform.localScale = new Vector2(GameManager.BulletSize, GameManager.BulletSize);
         }
         else

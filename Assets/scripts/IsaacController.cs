@@ -12,6 +12,7 @@ public class IsaacController : MonoBehaviour
   private Animator animatorBody;
   private Animator animatorHead;
   private Animator animatorHair;
+  private GameObject antBulletPrefab;
   public GameObject bulletPrefab;
   public GameObject bulletSidaPrefab;
   public GameObject bombPrefab;
@@ -38,6 +39,7 @@ public class IsaacController : MonoBehaviour
 
   void Start()
   {
+    antBulletPrefab = bulletPrefab;
     rb = GetComponent<Rigidbody2D>();
     animator = GetComponent<Animator>();
     animatorBody = GameObject.FindGameObjectWithTag("Body").GetComponent<Animator>();
@@ -128,12 +130,35 @@ public class IsaacController : MonoBehaviour
       isShooting = false;
   }
 
+  public GameObject Markov()
+  {
+      float randomValue = Random.Range(0f, 1f); // Número decimal entre 0 y 1
+
+      // Probabilidades de transición
+      float probToSidaIfBullet = 0.2f;   // si antes fue bullet, 20% chance de ir a bulletSida
+      float probToSidaIfSida = 0.7f;     // si antes fue bulletSida, 70% chance de seguir en bulletSida
+
+      GameObject nextBullet;
+
+      if (antBulletPrefab == bulletPrefab)
+      {
+          // Estado anterior fue bullet
+          nextBullet = (randomValue < probToSidaIfBullet) ? bulletSidaPrefab : bulletPrefab;
+      }
+      else
+      {
+          // Estado anterior fue bulletSida
+          nextBullet = (randomValue < probToSidaIfSida) ? bulletSidaPrefab : bulletPrefab;
+      }
+
+      antBulletPrefab = nextBullet; // Actualizar el estado anterior
+      return nextBullet;
+  }
+
   void shoot(float x, float y)
   {
       isShooting = true;
-      int ran = Random.Range(0, 2);
-      Debug.Log(ran);
-      GameObject bull = ran == 0 ? bulletPrefab : bulletSidaPrefab;
+      GameObject bull = Markov();
       GameObject bullet = Instantiate(bull, transform.position, Quaternion.identity);
       Rigidbody2D rb = bullet.AddComponent<Rigidbody2D>();
       rb.gravityScale = 0;
