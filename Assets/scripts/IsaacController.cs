@@ -30,6 +30,8 @@ public class IsaacController : MonoBehaviour
   private int numberOfBombs; // Número de bombas que tiene el jugador
   public Transform groundCheck;
 
+  public AudioClip damageSound; // Campo para el sonido de daño
+  private AudioSource audioSource; // Componente AudioSource
 
   public Text collectedText;
   public static int collectedAmount = 0;
@@ -46,6 +48,7 @@ public class IsaacController : MonoBehaviour
     hair = GameObject.FindGameObjectWithTag("Hair");
     death = GameObject.FindGameObjectWithTag("Death");
     death.SetActive(false);
+    audioSource = GetComponent<AudioSource>(); // Obtener el componente AudioSource
     if (rb == null)
     {
       Debug.LogError("No se encontró Rigidbody2D en " + gameObject.name);
@@ -96,6 +99,10 @@ public class IsaacController : MonoBehaviour
       isDamage = true;
       Vector2 force = position * 5f;;
       rb.AddForce(force, ForceMode2D.Impulse);
+      if (damageSound != null && audioSource != null) // Reproducir sonido si existe
+      {
+          audioSource.PlayOneShot(damageSound);
+      }
   }
 
   public void IsDamageFalse()

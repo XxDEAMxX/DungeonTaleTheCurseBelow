@@ -213,9 +213,23 @@ public class TheAdversaryController : MonoBehaviour
                 GetComponent<BoxCollider2D>().isTrigger = true;
                 curreState = TheAdversaryState.Dead;
                 animator.SetBool("isDeath", true);
-                GameManager.instance.WinGame();
-                GameObject.FindGameObjectWithTag("Player").SetActive(false);
-                
+                if (GameManager.instance != null)
+                {
+                    GameManager.instance.WinGame();
+                }
+                else
+                {
+                    Debug.LogError("GameManager.instance no está asignado en TheAdversaryController. No se puede llamar a WinGame().");
+                }
+                GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+                if (playerObject != null)
+                {
+                    playerObject.SetActive(false);
+                }
+                else
+                {
+                    Debug.LogWarning("No se encontró ningún GameObject con la etiqueta 'Player' para desactivar.");
+                }
             }
 
         }

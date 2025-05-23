@@ -30,6 +30,9 @@ public class Enemy : MonoBehaviour
     // private float damageTimer = 0f;
     private float lastDamageTime = -999f;
 
+    public AudioClip damageSound; // Campo para el sonido de daño
+    private AudioSource audioSource; // Componente AudioSource
+
     void Start()
     { 
         switch (enemyType)
@@ -43,6 +46,7 @@ public class Enemy : MonoBehaviour
         }  
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
+        audioSource = GetComponent<AudioSource>(); // Obtener el componente AudioSource
     }
     void Update()
     {
@@ -219,31 +223,52 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("BulletSida") || collision.CompareTag("Bullet"))
+        if (collision.CompareTag("BulletSida") || collision.CompareTag("Bullet") || collision.CompareTag("Sword"))
         {
+            bool tookDamage = false;
             if (collision.CompareTag("Bullet"))
             {
                 life--;
-            } else {
-                life = life - 2;
+                tookDamage = true;
             } 
+            else if (collision.CompareTag("BulletSida")) 
+            {
+                life = life - 2;
+                tookDamage = true;
+            }
+            else if (collision.CompareTag("Sword"))
+            {
+                life--;
+                tookDamage = true;
+            }
+
+            if (tookDamage && damageSound != null && audioSource != null) // Reproducir sonido si se hizo daño
+            {
+                audioSource.PlayOneShot(damageSound);
+            }
+
             if (life <= 0)
             {
                 GetComponent<BoxCollider2D>().isTrigger = true;
                 curreState = EnemyState.Dead;
-                animator.SetBool("BlDeath", true);
-                if (enemyType == EnemyType.Ranged)
+                animator.SetBool("BlDeath", true); // Asegúrate que "BlDeath" sea el parámetro correcto en tu Animator
+                if (enemyType == EnemyType.Ranged) // Considera si esta lógica también aplica a Melee o necesita ajustarse
                 {
                     RoomController.instance.StartCoroutine(RoomController.instance.RoomCoroutine());
                     Destroy(gameObject);
                 }
+                // Si los enemigos Melee no se destruyen aquí, podrían necesitar una llamada a Death() o similar
+                // o ajustar la condición de arriba.
             }
             
         }  
         if (collision.CompareTag("BombRange"))
         {
+            // Considera añadir sonido de daño por bomba aquí si es necesario
             curreState = EnemyState.Dead;   
-            animator.SetBool("BlDeath", true);
+            animator.SetBool("BlDeath", true); // Asegúrate que "BlDeath" sea el parámetro correcto
+            // Aquí también podrías necesitar lógica de RoomController y Destroy(gameObject)
+            // similar a la de arriba, dependiendo del comportamiento deseado.
         }
     }
 
