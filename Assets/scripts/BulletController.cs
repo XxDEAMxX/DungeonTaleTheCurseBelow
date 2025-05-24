@@ -77,7 +77,11 @@ public class BulletController : MonoBehaviour
                 transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * smoothFactor);
             }
 
-            if (isEnemyBullet)
+            return;
+        }
+
+        // Movimiento normal
+        if (isEnemyBullet)
         {
             curPos = transform.position;
             transform.position = Vector2.MoveTowards(transform.position, playerPos, 5f * Time.deltaTime);
@@ -87,12 +91,6 @@ public class BulletController : MonoBehaviour
             // }
             lastPos = curPos;
         }
-
-            return;
-        }
-
-        // Movimiento normal
-        
     }
 
 

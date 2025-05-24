@@ -1045,8 +1045,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5eb9073dcf1f4041a437a709bdcef51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 15
-  height: 10
+  width: 13
+  height: 8
   x: 0
   y: 0
   leftDoor: {fileID: 0}
