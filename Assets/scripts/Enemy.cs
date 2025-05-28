@@ -52,20 +52,7 @@ public class Enemy : MonoBehaviour
     {
         if (curreState == EnemyState.Dead)
         return;
-        // if (isTouchingPlayer)
-        // {
-        //     damageTimer += Time.deltaTime;
-        //     if (damageTimer >= damageInterval)
-        //     {
-        //         Vector2 rawDir = (player.transform.position - transform.position);
-        //         Vector2 direction = Mathf.Abs(rawDir.x) > Mathf.Abs(rawDir.y)
-        //             ? new Vector2(Mathf.Sign(rawDir.x), 0)
-        //             : new Vector2(0, Mathf.Sign(rawDir.y));
-                
-        //         GameManager.instance.DecreaseLife(direction);
-        //         damageTimer = 0f; // reinicia para el siguiente intervalo
-        //     }
-        // }
+
         switch (curreState)
         {
             case EnemyState.Idle:
@@ -78,7 +65,7 @@ public class Enemy : MonoBehaviour
                 Follow();
                 break;
             case EnemyState.Dead:
-                // Death();
+                Death();
                 break;
         }
 
@@ -88,7 +75,6 @@ public class Enemy : MonoBehaviour
             {
                 if (isPlayerInRange(5))
                 {
-                    Debug.Log("Attack");
                     Attack();
                 }
             }
@@ -182,19 +168,6 @@ public class Enemy : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
 
-    // private void OnCollisionEnter2D(Collision2D other)
-    // {
-    //     if (other.gameObject.CompareTag("Player") && canDealDamage)
-    //     {
-    //         Vector2 rawDir = (other.transform.position - transform.position);
-    //         Vector2 direction = Mathf.Abs(rawDir.x) > Mathf.Abs(rawDir.y)
-    //             ? new Vector2(Mathf.Sign(rawDir.x), 0)
-    //             : new Vector2(0, Mathf.Sign(rawDir.y));
-
-    //         GameManager.instance.DecreaseLife(direction);
-    //         StartCoroutine(DamageCooldown());
-    //     }
-    // }
 
     private void OnCollisionStay2D(Collision2D other)
     {
@@ -211,15 +184,6 @@ public class Enemy : MonoBehaviour
                 }
         }
     }
-
-    // private void OnCollisionExit2D(Collision2D other)
-    // {
-    //     if (other.gameObject.CompareTag("Player"))
-    //     {
-    //         isTouchingPlayer = false;
-    //         damageTimer = 0f;
-    //     }
-    // }
 
     void OnTriggerEnter2D(Collider2D collision)
     {

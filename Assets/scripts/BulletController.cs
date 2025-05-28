@@ -54,7 +54,7 @@ public class BulletController : MonoBehaviour
             {
                 isFalling = false;
                 isDying = true;
-                rb.velocity = Vector2.zero;
+                rb.linearVelocity = Vector2.zero;
                 rb.bodyType = RigidbodyType2D.Kinematic;
                 GetComponent<Collider2D>().enabled = false;
                 animator.SetBool("isDeath", true);
@@ -85,10 +85,6 @@ public class BulletController : MonoBehaviour
         {
             curPos = transform.position;
             transform.position = Vector2.MoveTowards(transform.position, playerPos, 5f * Time.deltaTime);
-            // if (curPos == lastPos)
-            // {
-            //     Destroy(gameObject);
-            // }
             lastPos = curPos;
         }
     }
@@ -111,11 +107,11 @@ public class BulletController : MonoBehaviour
         // Dirección horizontal actual de la lágrima
         Vector2 direction = transform.right.normalized;
 
-        // Cae solo un poco hacia abajo (sin arco)
+        // Cae solo un poco hacia abajo
         fallEndPos = fallStartPos + direction * 0.4f + Vector2.down * 1.0f;
 
         // Desactiva físicas
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Kinematic;
         GetComponent<Collider2D>().enabled = false;
     }

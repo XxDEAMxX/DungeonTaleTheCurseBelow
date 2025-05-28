@@ -54,13 +54,11 @@ public class TheAdversaryController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Current State: " + curreState);
         if (curreState == TheAdversaryState.Dead)
             return;
 
         if (!isInitFinish && notInRoom)
         {
-            Debug.Log("Solo one");
             curreState = TheAdversaryState.Init;
             isInitFinish = true;
         }
@@ -79,7 +77,7 @@ public class TheAdversaryController : MonoBehaviour
                 Follow();
                 break;
             case TheAdversaryState.Dead:
-                // Death();
+                Death();
                 break;
             case TheAdversaryState.GenerateChild:
                 stop();
@@ -89,8 +87,6 @@ public class TheAdversaryController : MonoBehaviour
 
     private void stop()
     {
-        // rb.linearVelocity = Vector2.zero;
-        // rb.bodyType = RigidbodyType2D.Static;
     }
 
     IEnumerator ProcessQueue()
@@ -136,7 +132,6 @@ public class TheAdversaryController : MonoBehaviour
     {
         while (curreState != TheAdversaryState.Dead)
         {
-            //Todo: rando
             float randomInterval = Random.Range(0f, 7f);
             yield return new WaitForSeconds(randomInterval);
 
@@ -184,8 +179,7 @@ public class TheAdversaryController : MonoBehaviour
 
     private void Follow()
     {
-        if (curreState != TheAdversaryState.Follow && !isGenerateChild) return; // seguridad extra
-        // rb = rbTmp;
+        if (curreState != TheAdversaryState.Follow && !isGenerateChild) return;
 
         animator.SetBool("isIdle", false);
         animator.SetBool("isAttack", true);
@@ -197,7 +191,7 @@ public class TheAdversaryController : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle + 90f); // mirar hacia abajo
+        transform.rotation = Quaternion.Euler(0, 0, angle + 90f);
     }
 
 

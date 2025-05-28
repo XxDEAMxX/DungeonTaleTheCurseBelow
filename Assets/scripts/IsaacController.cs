@@ -14,7 +14,7 @@ public class IsaacController : MonoBehaviour
   private Animator animatorHair;
   private GameObject antBulletPrefab;
   public GameObject bulletPrefab;
-  public GameObject bulletSidaPrefab;
+  public GameObject bulletVenomPrefab;
   public GameObject bombPrefab;
   public GameObject body;
   public GameObject head;
@@ -135,20 +135,20 @@ public class IsaacController : MonoBehaviour
       float randomValue = Random.Range(0f, 1f); // Número decimal entre 0 y 1
 
       // Probabilidades de transición
-      float probToSidaIfBullet = 0.2f;   // si antes fue bullet, 20% chance de ir a bulletSida
-      float probToSidaIfSida = 0.7f;     // si antes fue bulletSida, 70% chance de seguir en bulletSida
+      float probToVenomIfBullet = 0.2f;   // Bala → Veneno (20%)
+      float probToVenomfVenom = 0.7f;     // Veneno → Veneno (70%)
 
       GameObject nextBullet;
 
       if (antBulletPrefab == bulletPrefab)
       {
           // Estado anterior fue bullet
-          nextBullet = (randomValue < probToSidaIfBullet) ? bulletSidaPrefab : bulletPrefab;
+          nextBullet = (randomValue < probToVenomIfBullet) ? bulletVenomPrefab : bulletPrefab;
       }
       else
       {
-          // Estado anterior fue bulletSida
-          nextBullet = (randomValue < probToSidaIfSida) ? bulletSidaPrefab : bulletPrefab;
+          // Estado anterior fue bulletVenom
+          nextBullet = (randomValue < probToVenomfVenom) ? bulletVenomPrefab : bulletPrefab;
       }
 
       antBulletPrefab = nextBullet; // Actualizar el estado anterior
