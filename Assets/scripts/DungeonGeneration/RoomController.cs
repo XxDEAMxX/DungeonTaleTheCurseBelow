@@ -91,20 +91,26 @@ public class RoomController : MonoBehaviour{
         currentLoadRoomData = loadRoomQueue.Dequeue();
         isLoadingRoom = true;
         StartCoroutine(LoadRoomCoroutine(currentLoadRoomData));
-    }
-
-    IEnumerator SpawnBossRoom()
+    }    IEnumerator SpawnBossRoom()
     {
         spawnedBossRoom = true;
         yield return new WaitForSeconds(0.5f);
         if(loadRoomQueue.Count == 0)
         {
-            Room bossRoom = loadedRooms[loadedRooms.Count - 1];
-            RoomInfo tempRoom = new RoomInfo { x = bossRoom.x, y = bossRoom.y };
-            Destroy(bossRoom.gameObject);
-            var roomToRemove = loadedRooms.Single(r => r.x == tempRoom.x && r.y == tempRoom.y);
-            loadedRooms.Remove(roomToRemove);
-            LoadRoom("End", tempRoom.x, tempRoom.y);
+            if (loadedRooms.Count > 0)
+            {
+                Room bossRoom = loadedRooms[loadedRooms.Count - 1];
+                RoomInfo tempRoom = new RoomInfo { x = bossRoom.x, y = bossRoom.y };
+                Destroy(bossRoom.gameObject);
+                var roomToRemove = loadedRooms.Single(r => r.x == tempRoom.x && r.y == tempRoom.y);
+                loadedRooms.Remove(roomToRemove);
+                LoadRoom("End", tempRoom.x, tempRoom.y);
+            }
+            else
+            {
+                Debug.LogError("No hay habitaciones cargadas para crear la habitación del jefe. Creando en posición por defecto.");
+                LoadRoom("End", 0, 1);
+            }
         }
     }
 
@@ -248,10 +254,9 @@ public class RoomController : MonoBehaviour{
     public Room FindRoom(int x, int y) {
         return loadedRooms.Find(item => item.x == x && item.y == y);
     }
-    
-    public string GetRandomRoomName() {
+      public string GetRandomRoomName() {
         string[] roomNames = new string[] { "Empty", "Basic1" };
-        return roomNames[Random.Range(0, roomNames.Length)];
+        return roomNames[CustomRandom.Range(0, roomNames.Length)];
     }
 
     void Awake() {

@@ -18,9 +18,10 @@ public class DungeonCrawlerController: MonoBehaviour
         { Direction.left, Vector2Int.left },
         { Direction.down, Vector2Int.down },
         { Direction.Right, Vector2Int.right }
-    };
-    public static List<Vector2Int> GenerateDungeon(DungeonGeneratorData dungeonGeneratorData)
+    };    public static List<Vector2Int> GenerateDungeon(DungeonGeneratorData dungeonGeneratorData)
     {
+        positionsVisited.Clear(); // Limpiar la lista antes de generar un nuevo dungeon
+        
         List<DangeonCrawler> dungeonCrawlers = new List<DangeonCrawler>();
 
         for (int i = 0; i < dungeonGeneratorData.numberOfCrawlers; i++)
