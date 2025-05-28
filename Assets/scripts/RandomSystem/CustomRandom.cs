@@ -43,15 +43,13 @@ public class CustomRandom : MonoBehaviour
     {
         return min + value * (max - min);
     }
-    
-    // Equivalente a Random.Range para enteros
+      // Equivalente a Random.Range para enteros
     public static int Range(int min, int max)
     {
         // Para enteros, Random.Range(min, max) en Unity es inclusivo para min y exclusivo para max.
-        // Nuestra implementación de _rng.RandomInt(min, max) debe seguir la misma convención
-        // o ajustarse aquí. Asumiendo que _rng.RandomInt es [min, max-1]
+        // _rng.RandomInt(min, max) es inclusivo en ambos extremos, así que ajustamos max-1
         if (min >= max) return min; // Evitar error si min es mayor o igual a max
-        return _rng != null ? _rng.RandomInt(min, max) : 
+        return _rng != null ? _rng.RandomInt(min, max - 1) : 
             min + (int)(InitializeAndGetRandom() * (max - min));
     }
     
