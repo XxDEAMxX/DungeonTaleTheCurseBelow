@@ -104,7 +104,7 @@ public class BulletController : MonoBehaviour
         fallTimer = 0f;
         fallStartPos = transform.position;
 
-        // Dirección horizontal actual de la lágrima
+        // Dirección horizontal actual de la bala
         Vector2 direction = transform.right.normalized;
 
         // Cae solo un poco hacia abajo

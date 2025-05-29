@@ -105,7 +105,7 @@ public class IsaacController : MonoBehaviour
 
       if ((shootHor != 0 || shootVer != 0) && Time.time > lastFire + fireDelay)
       {
-          shoot(shootHor, shootVer);
+          shoot(shootHor, shootVer); // Disparar la bala
           lastFire = Time.time;
       }
   }
