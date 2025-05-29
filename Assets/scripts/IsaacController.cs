@@ -35,11 +35,25 @@ public class IsaacController : MonoBehaviour
   private AudioSource audioSource; // Componente AudioSource
 
   public Text collectedText;
-  public static int collectedAmount = 0;
-
-  void Start()
+  public static int collectedAmount = 0;  void Start()
   {
     antBulletPrefab = bulletPrefab;
+    
+    // Validar que bulletPrefab esté asignado
+    if (bulletPrefab == null)
+    {
+        Debug.LogError("bulletPrefab no está asignado en IsaacController. El juego puede no funcionar correctamente.");
+    }
+    
+    // Intentar inicializar bulletVenomPrefab automáticamente
+    InitializeBulletVenomPrefab();
+    
+    // Si bulletVenomPrefab aún no está asignado, mostrar advertencia pero continuar
+    if (bulletVenomPrefab == null)
+    {
+        Debug.LogWarning("bulletVenomPrefab no está asignado en IsaacController. Se usará bulletPrefab como fallback.");
+    }
+    
     rb = GetComponent<Rigidbody2D>();
     animator = GetComponent<Animator>();
     animatorBody = GameObject.FindGameObjectWithTag("Body").GetComponent<Animator>();
@@ -59,6 +73,8 @@ public class IsaacController : MonoBehaviour
     {
       Debug.LogError("No se encontró Animator en " + gameObject.name);
     }
+
+    InitializeBulletVenomPrefab(); // Inicializar prefab de bala venenosa
   }
 
   void Update(){
@@ -129,9 +145,16 @@ public class IsaacController : MonoBehaviour
       yield return new WaitForSeconds(fireDelay);
       isShooting = false;
   }
-
   public GameObject Markov()
   {
+      // Si bulletVenomPrefab no está asignado, usar solo bulletPrefab
+      if (bulletVenomPrefab == null)
+      {
+          Debug.LogWarning("bulletVenomPrefab no está asignado. Usando bulletPrefab por defecto.");
+          antBulletPrefab = bulletPrefab;
+          return bulletPrefab;
+      }
+
       float randomValue = Random.Range(0f, 1f); // Número decimal entre 0 y 1
 
       // Probabilidades de transición
@@ -154,11 +177,19 @@ public class IsaacController : MonoBehaviour
       antBulletPrefab = nextBullet; // Actualizar el estado anterior
       return nextBullet;
   }
-
   void shoot(float x, float y)
   {
       isShooting = true;
       GameObject bull = Markov();
+      
+      // Validar que el prefab sea válido antes de instanciar
+      if (bull == null)
+      {
+          Debug.LogError("El prefab de bala es nulo. No se puede disparar.");
+          isShooting = false;
+          return;
+      }
+      
       GameObject bullet = Instantiate(bull, transform.position, Quaternion.identity);
       Rigidbody2D rb = bullet.AddComponent<Rigidbody2D>();
       rb.gravityScale = 0;
@@ -311,4 +342,34 @@ public class IsaacController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+  /// <summary>
+  /// Inicializa el prefab de bala venenosa si no está asignado
+  /// </summary>
+  private void InitializeBulletVenomPrefab()
+  {
+      if (bulletVenomPrefab == null && bulletPrefab != null)
+      {
+          // Buscar si existe un prefab con nombre similar
+          GameObject venomBullet = Resources.Load<GameObject>("Prefabs/BulletVenom");
+          if (venomBullet == null)
+          {
+              venomBullet = Resources.Load<GameObject>("BulletVenom");
+          }
+          if (venomBullet == null)
+          {
+              venomBullet = Resources.Load<GameObject>("Prefabs/BulletSida"); // Usar BulletSida como alternativa
+          }
+          
+          if (venomBullet != null)
+          {
+              bulletVenomPrefab = venomBullet;
+              Debug.Log("Se encontró y asignó un prefab de bala alternativo: " + venomBullet.name);
+          }
+          else
+          {
+              Debug.LogWarning("No se encontró prefab de bala venenosa. El juego funcionará solo con balas normales.");
+          }
+      }
+  }
 }

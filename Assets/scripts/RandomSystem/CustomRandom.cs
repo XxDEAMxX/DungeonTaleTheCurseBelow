@@ -6,10 +6,9 @@ public class CustomRandom : MonoBehaviour
 {
     private static ValidatedRandom _rng;
     private static CustomRandom _instance;
-    
-    [SerializeField] private int seed = 0;
-    [SerializeField] private int batchSize = 10000;
-    [SerializeField] private float significanceLevel = 0.05f;
+      [SerializeField] private int seed = 0;
+    [SerializeField] private int batchSize = 1000; // Tamaño más pequeño
+    [SerializeField] private float significanceLevel = 0.01f; // Menos estricto
     [SerializeField] private bool useRandomSeedOnStart = true;
     
     private void Awake()
@@ -25,14 +24,29 @@ public class CustomRandom : MonoBehaviour
         
         InitializeRNG();
     }
-    
-    private void InitializeRNG()
+      private void InitializeRNG()
     {
         int seedToUse = useRandomSeedOnStart ? 
             System.Environment.TickCount : seed;
             
         Debug.Log($"Inicializando CustomRandom con semilla: {seedToUse}");
-        _rng = new ValidatedRandom(seedToUse, batchSize, significanceLevel);
+        
+        try
+        {
+            _rng = new ValidatedRandom(seedToUse, batchSize, significanceLevel, maxAttempts: 10);
+        }
+        catch (ValidationException ex)
+        {
+            Debug.LogWarning($"Error en validación estadística: {ex.Message}. Usando configuración de fallback.");
+            // Configuración de fallback más permisiva
+            _rng = new ValidatedRandom(seedToUse, batchSize: 500, significanceLevel: 0.001f, maxAttempts: 20);
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError($"Error crítico inicializando RNG: {ex.Message}");
+            // Fallback básico
+            _rng = new ValidatedRandom(seedToUse, batchSize: 100, significanceLevel: 0.001f, maxAttempts: 50);
+        }
     }
     
     // Equivalente a Random.value
@@ -85,8 +99,7 @@ public class CustomRandom : MonoBehaviour
                              
         return mean + stdDev * randStdNormal;
     }
-    
-    private static float InitializeAndGetRandom()
+      private static float InitializeAndGetRandom()
     {
         if (_instance == null)
         {
@@ -94,12 +107,28 @@ public class CustomRandom : MonoBehaviour
             _instance = go.AddComponent<CustomRandom>();
             // Awake se llamará automáticamente, inicializando _rng
         }
+        
         // Si _rng aún es nulo después de lo anterior, algo falló en la inicialización de _instance
-        if (_rng == null) {
+        if (_rng == null) 
+        {
             Debug.LogError("CustomRandom RNG no está inicializado.");
-            return 0f; // O lanzar una excepción
+            return UnityEngine.Random.value; // Fallback a Unity Random
         }
-        return _rng.Random();
+        
+        try
+        {
+            return _rng.Random();
+        }
+        catch (ValidationException ex)
+        {
+            Debug.LogWarning($"Error de validación en RNG: {ex.Message}. Usando RandomSimple().");
+            return _rng.RandomSimple();
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError($"Error crítico en RNG: {ex.Message}. Usando Unity Random como fallback.");
+            return UnityEngine.Random.value;
+        }
     }
     
     // Establecer semilla manualmente

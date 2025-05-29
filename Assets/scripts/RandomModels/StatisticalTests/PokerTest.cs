@@ -19,20 +19,24 @@ namespace RandomModels.StatisticalTests
         private float totalSum;
         private float chiReverse;
         private bool passed;
-        private readonly float alpha;
-
-        /// <summary>
+        private readonly float alpha;        /// <summary>
         /// Inicializa una nueva instancia de la prueba de Póker.
         /// </summary>
         /// <param name="numbers">Secuencia de números a evaluar</param>
         /// <param name="alpha">Nivel de significancia de la prueba</param>
         public PokerTest(List<float> numbers, float alpha = 0.05f)
         {
-            this.numbers = new List<float>(numbers);
-            this.n = numbers.Count;
+            this.numbers = new List<float>(numbers ?? new List<float>());
+            this.n = this.numbers.Count;
             this.totalSum = 0.0f;
             this.passed = false;
             this.alpha = alpha;
+            
+            // Inicializar el array observed con ceros
+            for (int i = 0; i < observed.Length; i++)
+            {
+                observed[i] = 0;
+            }
             
             // Valor crítico de chi-cuadrado para 6 grados de libertad y nivel de significancia 0.05
             this.chiReverse = 12.59f;
@@ -142,9 +146,7 @@ namespace RandomModels.StatisticalTests
                 count[c]++;
             }
             return count.Values.Count(v => v == 2) == 1 && count.Values.Count(v => v == 1) == 3;
-        }
-
-        /// <summary>
+        }        /// <summary>
         /// Calcula las frecuencias observadas de cada mano de poker.
         /// </summary>
         private void CalculateObservedFrequencies()
@@ -152,9 +154,17 @@ namespace RandomModels.StatisticalTests
             foreach (float n in numbers)
             {
                 // Convertir el número a cadena con exactamente 5 dígitos decimales
-                string num = (n.ToString("F5")).Split('.')[1];
+                string numStr = n.ToString("F5");
+                string[] parts = numStr.Split('.');
                 
-                if (num.Length != 5) // Asegurarse de que tengamos exactamente 5 dígitos
+                // Verificar que hay parte decimal
+                if (parts.Length < 2)
+                    continue;
+                    
+                string num = parts[1];
+                
+                // Asegurarse de que tengamos exactamente 5 dígitos
+                if (num.Length != 5)
                     continue;
 
                 if (AllDiff(num))
@@ -183,19 +193,22 @@ namespace RandomModels.StatisticalTests
             {
                 expected.Add(probabilities[i] * n);
             }
-        }
-
-        /// <summary>
+        }        /// <summary>
         /// Calcula los valores de chi-cuadrado para cada categoría.
         /// </summary>
         private void CalculateChiValues()
         {
-            for (int i = 0; i < observed.Length; i++)
+            for (int i = 0; i < observed.Length && i < probabilities.Length; i++)
             {
                 float expectedVal = probabilities[i] * n;
-                if (expectedVal != 0)
+                if (expectedVal > 0)
                 {
-                    chiValues.Add(((observed[i] - expectedVal) * (observed[i] - expectedVal)) / expectedVal);
+                    float chiValue = ((observed[i] - expectedVal) * (observed[i] - expectedVal)) / expectedVal;
+                    chiValues.Add(chiValue);
+                }
+                else
+                {
+                    chiValues.Add(0f);
                 }
             }
         }
@@ -206,13 +219,17 @@ namespace RandomModels.StatisticalTests
         private void CalculateTotalSum()
         {
             totalSum = chiValues.Sum();
-        }
-
-        /// <summary>
+        }        /// <summary>
         /// Ejecuta la prueba completa de Póker.
         /// </summary>
         public void CheckPoker()
         {
+            if (numbers == null || numbers.Count == 0)
+            {
+                passed = false;
+                return;
+            }
+            
             CalculateObservedFrequencies();
             CalculateExpectedFrequencies();
             CalculateChiValues();
