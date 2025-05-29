@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine.UI;
 
 // Estados del jefe final para manejo secuencial de comportamientos
