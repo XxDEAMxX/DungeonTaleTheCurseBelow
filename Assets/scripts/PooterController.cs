@@ -10,7 +10,7 @@ public class PooterController : MonoBehaviour
     private bool isDead = false;
     void Start()
     {
-        life = 2;
+        life = 1;
         animator = GetComponent<Animator>();
         StartCoroutine(RandomWalk());
     }

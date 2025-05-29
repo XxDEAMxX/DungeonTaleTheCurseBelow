@@ -138,7 +138,13 @@ public class TheAdversaryController : MonoBehaviour
         Vector2 spawnOffset = Random.insideUnitCircle * 0.5f;
         Vector3 spawnPosition = spawnPoint.position + (Vector3)spawnOffset;
 
-        Instantiate(childPrefab, spawnPosition, Quaternion.identity);
+        int fliesToGenerate = Random.Range(2, 6); // entre 2 y 5
+        for (int i = 0; i < fliesToGenerate && currentChildren < maxChildren; i++)
+        {
+
+            Instantiate(childPrefab, spawnPosition, Quaternion.identity);
+            currentChildren++;
+        }
         currentChildren++;        
     }
     // SECUENCIA DE GENERACIÓN TEMPORAL DE ENEMIGOS
