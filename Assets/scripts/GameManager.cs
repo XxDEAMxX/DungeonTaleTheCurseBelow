@@ -215,9 +215,8 @@ public class GameManager : MonoBehaviour
         collectedNames.Clear();
 
         isPaused = false;
-        Time.timeScale = 1;
         MusicManager.instance.Init();
-        // Opcional: reiniciar otros estados o llamar a HUD si necesario
+        Time.timeScale = 1;
     }
     
 

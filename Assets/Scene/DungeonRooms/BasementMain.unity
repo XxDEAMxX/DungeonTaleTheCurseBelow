@@ -880,8 +880,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 740829817}
-  musica1: {fileID: 8300000, guid: 9cc44fc4d23200446a4f0751bba875a7, type: 3}
-  musica2: {fileID: 8300000, guid: fde8c24e2e018b443b679ecce4e8e3c4, type: 3}
+  main: {fileID: 8300000, guid: 85dc4bc69065ed14f8d57be4ee034d9c, type: 3}
+  boss: {fileID: 8300000, guid: 7429debea0989c54f962d028a21179f8, type: 3}
+  victory: {fileID: 8300000, guid: 75e898086f861b44aba4ee542085b83d, type: 3}
   isBossMusic: 0
 --- !u!82 &740829817
 AudioSource:

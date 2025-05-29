@@ -23,13 +23,15 @@ public class MusicManager : MonoBehaviour
     IEnumerator Del()
     {
         yield return new WaitForSeconds(3f);
+        restart();
         audioSource.Play();
     }
 
     public AudioSource audioSource;
-    public AudioClip musica1;
-    public AudioClip musica2;
- 
+    public AudioClip main;
+    public AudioClip boss;
+    public AudioClip victory;
+
     public static MusicType type;
     public static MusicType Type { get => type; set => type = value; }
     public bool isBossMusic = false;
@@ -38,11 +40,11 @@ public class MusicManager : MonoBehaviour
     {
         if (!isBossMusic)
         {
-            CambiarMusica(musica1);
+            CambiarMusica(main);
         }
         else
         {
-            CambiarMusica(musica2);
+            CambiarMusica(boss);
         }
     }
 
@@ -61,11 +63,11 @@ public class MusicManager : MonoBehaviour
     {
         if (isBossMusic)
         {
-            CambiarMusica(musica2);
+            CambiarMusica(boss);
         }
         else
         {
-            CambiarMusica(musica1);
+            CambiarMusica(main);
         }
     }
 
@@ -76,5 +78,22 @@ public class MusicManager : MonoBehaviour
         audioSource.clip = nuevaMusica;
         audioSource.loop = true;
         audioSource.Play();
+    }
+
+    public void VictoryMusic()
+    {
+        CambiarMusica(victory);
+    }
+
+    public void restart()
+    {
+        if (!isBossMusic)
+        {
+            CambiarMusica(main);
+        }
+        else
+        {
+            CambiarMusica(boss);
+        }
     }
 }
