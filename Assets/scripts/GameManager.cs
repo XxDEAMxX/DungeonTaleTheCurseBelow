@@ -50,8 +50,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("vida: " + health);
-        Debug.Log(maxHealth);
         if (Input.GetKeyDown(KeyCode.Escape) && IsaacController.instance.isDeath == false)
         {
             TogglePauseMenu();
@@ -150,9 +148,6 @@ public class GameManager : MonoBehaviour
     public static void HealPlayer(int healthAmount)
     {
         health = Mathf.Min(maxHealth, health + healthAmount);
-        Debug.Log("health: " + health);
-        Debug.Log("healthAmount: " + healthAmount);
-        Debug.Log("maxHealth: " + maxHealth);
         HUD.instance.UpdateLife(health);
     }
 
@@ -208,14 +203,10 @@ public class GameManager : MonoBehaviour
         point = 0;
         numbBombs = 2;
 
-        // bootCollected = false;
-        // screwCollected = false;
-
         collectedItems.Clear();
         collectedNames.Clear();
-
+        MusicManager.instance.Stop();
         isPaused = false;
-        MusicManager.instance.Init();
         Time.timeScale = 1;
     }
     
@@ -234,9 +225,8 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
-        Debug.Log("You win");
+        MusicManager.instance.VictoryMusic();
         win.SetActive(true);
         winText.SetActive(true);
-        // GameObject.FindGameObjectWithTag("Player").GetComponent<IsaacController>().enabled = false;
     }
 }

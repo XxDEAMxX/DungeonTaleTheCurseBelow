@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8246058409862208304}
   - component: {fileID: 148019163088328642}
   m_Layer: 0
-  m_Name: BulletSida
+  m_Name: BulletVenom
   m_TagString: BulletSida
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

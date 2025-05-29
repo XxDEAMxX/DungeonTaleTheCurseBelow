@@ -53,6 +53,7 @@ public class TheAdversaryController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        GetComponent<BoxCollider2D>().isTrigger = true;
         life = 2;
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -66,8 +67,10 @@ public class TheAdversaryController : MonoBehaviour
         // TRANSICIÓN SECUENCIAL: Inicialización del jefe cuando entra en la sala
         if (!isInitFinish && notInRoom)
         {
+            MusicManager.instance.SetBossMusic();
             curreState = TheAdversaryState.Init;  // Cambio secuencial automático de estado
             isInitFinish = true;
+            GetComponent<BoxCollider2D>().isTrigger = false;
         }
 
         // MÁQUINA DE ESTADOS SECUENCIAL: Procesamiento ordenado de comportamientos
@@ -226,27 +229,7 @@ public class TheAdversaryController : MonoBehaviour
                 curreState = TheAdversaryState.Dead;                // 4. Estado de muerte
                 animator.SetBool("isDeath", true);                  // 5. Animación de muerte
                 
-                // SECUENCIA DE EVENTOS DE VICTORIA                if (GameManager.instance != null)
-                {
-                    GameManager.instance.WinGame();                 // 6. Activar victoria
-                }
-                else
-                {
-                    Debug.LogError("GameManager.instance no está asignado en TheAdversaryController. No se puede llamar a WinGame().");
-                }
-                
-                // SECUENCIA DE DESACTIVACIÓN DEL JUGADOR
-                GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
-                if (playerObject != null)
-                {
-                    playerObject.SetActive(false);                  // 7. Desactivar jugador
-                }
-                else
-                {
-                    Debug.LogWarning("No se encontró ningún GameObject con la etiqueta 'Player' para desactivar.");
-                }
-            }
-
+                // SECUENCIA DE EVENTOS DE VICTORIA            }
         }
         if (collision.CompareTag("BombRange"))
         {
@@ -256,8 +239,28 @@ public class TheAdversaryController : MonoBehaviour
     }
 
     public void setDead()
-    { 
+    {
         animator.SetBool("isDead", true);
+        if (GameManager.instance != null)
+        {
+            Debug.Log("Llamando a WinGame() desde TheAdversaryController.");
+            GameManager.instance.WinGame();                 // 6. Activar victoria
+        }
+        else
+        {
+            Debug.LogError("GameManager.instance no está asignado en TheAdversaryController. No se puede llamar a WinGame().");
+        }
+                
+                // SECUENCIA DE DESACTIVACIÓN DEL JUGADOR
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null)
+        {
+            playerObject.SetActive(false);                  // 7. Desactivar jugador
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró ningún GameObject con la etiqueta 'Player' para desactivar.");
+        }
     }    // MANEJO SECUENCIAL DE COLISIÓN Y DAÑO AL JUGADOR
     private void OnCollisionEnter2D(Collision2D other)
     {
