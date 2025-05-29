@@ -59,7 +59,7 @@ public class TheAdversaryController : MonoBehaviour
         canvas.enabled = false;
         rb = GetComponent<Rigidbody2D>();
         GetComponent<BoxCollider2D>().isTrigger = true;
-        life = 30;
+        life = 100;
         lifeMax = life;
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");

@@ -108,8 +108,8 @@ MonoBehaviour:
     itemImage: {fileID: 0}
   healthChange: 0
   moveSpeedChange: 0
-  attackSpeedChange: 0
-  bulletSizeChange: 0.2
+  attackSpeedChange: 0.1
+  bulletSizeChange: 0.1
   pickupSound: {fileID: 8300000, guid: a38fd93399de74740831e083c361ce13, type: 3}
 --- !u!82 &-3327259722320212432
 AudioSource:
