@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,6 +38,20 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        health = 10;
+        maxHealth = 10;
+        moveSpeed = 3f;
+        fireRate = 1f;
+        bulletSize = 2f;
+
+        point = 0;
+        numbBombs = 2;
+
+        collectedItems.Clear();
+        collectedNames.Clear();
+        MusicManager.instance.Stop();
+        isPaused = false;
+        Time.timeScale = 1;
         menu = GameObject.FindGameObjectWithTag("Menu");
         win = GameObject.FindGameObjectWithTag("Win");
         winText = GameObject.FindGameObjectWithTag("WinText");
@@ -67,16 +82,16 @@ public class GameManager : MonoBehaviour
     }
 
     void Awake()
+{
+    if (instance == null)
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        instance = this;
     }
+    else
+    {
+        Destroy(gameObject);
+    }
+}
     public void AddPoint(int value)
     {
         point += value;
@@ -209,18 +224,33 @@ public class GameManager : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1;
     }
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        hud = FindFirstObjectByType<HUD>();
+        // IsaacController.instance se autogestiona si también es singleton
+    }
     
 
     public void RestartGame()
     {
         ResetState();
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1);
     }
 
     public void BackMenu()
     {
         MusicManager.instance.Stop();
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);
     }
 
     public void WinGame()
