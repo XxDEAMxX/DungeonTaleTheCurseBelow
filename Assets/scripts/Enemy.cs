@@ -22,11 +22,11 @@ public class Enemy : MonoBehaviour
     public bool notInRoom = false;
     private bool coolAtack = false;
 
-    private bool canDealDamage = true;
+    // private bool canDealDamage = true;
     private float damageCooldown = 1f; 
 
     // private bool isTouchingPlayer = false;
-    private float damageInterval = 1f;
+    // private float damageInterval = 1f;
     // private float damageTimer = 0f;
     private float lastDamageTime = -999f;
 
@@ -95,9 +95,9 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator DamageCooldown()
     {
-        canDealDamage = false;
+        // canDealDamage = false;
         yield return new WaitForSeconds(damageCooldown);
-        canDealDamage = true;
+        // canDealDamage = true;
     }
 
     private void Attack()

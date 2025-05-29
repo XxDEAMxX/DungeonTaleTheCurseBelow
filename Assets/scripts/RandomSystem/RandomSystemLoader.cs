@@ -9,7 +9,7 @@ public class RandomSystemLoader : MonoBehaviour
     {
         // Verificar si ya existe una instancia de RandomGameManager.
         // Esto evita duplicados si el GameManager ya está en la escena o fue cargado por otro loader.
-        if (FindObjectOfType<RandomGameManager>() == null)
+        if (FindFirstObjectByType<RandomGameManager>() == null)
         {
             if (randomGameManagerPrefab != null)
             {

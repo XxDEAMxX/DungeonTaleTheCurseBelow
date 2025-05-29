@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using Microsoft.Unity.VisualStudio.Editor;
+using UnityEngine.UI;
 
 // Estados del jefe final para manejo secuencial de comportamientos
 public enum TheAdversaryState { Init, Idle, Attack, Follow, Dead, GenerateChild };
@@ -18,6 +20,7 @@ public class TheAdversaryController : MonoBehaviour
             instance = this;
     } 
     private int life;
+    private int lifeMax;
     private Animator animator;
     private GameObject player;
     TheAdversaryState curreState = TheAdversaryState.Idle;
@@ -25,6 +28,8 @@ public class TheAdversaryController : MonoBehaviour
     public bool notInRoom = false;
     private bool isInitFinish = false;
     private Rigidbody2D rb;
+    public Canvas canvas;
+    public UnityEngine.UI.Image healthBar;
 
 
     public GameObject childPrefab; // Asigna el prefab del "hijo" desde el Inspector
@@ -52,13 +57,16 @@ public class TheAdversaryController : MonoBehaviour
 
     void Start()
     {
+        canvas.enabled = false;
         rb = GetComponent<Rigidbody2D>();
         GetComponent<BoxCollider2D>().isTrigger = true;
-        life = 2;
+        life = 30;
+        lifeMax = life;
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(ProcessQueue());
-    }    void Update()
+    }
+    void Update()
     {
         // SECUENCIA DE ESTADOS: Verificar primero si está muerto para evitar procesamiento innecesario
         if (curreState == TheAdversaryState.Dead)
@@ -68,6 +76,7 @@ public class TheAdversaryController : MonoBehaviour
         if (!isInitFinish && notInRoom)
         {
             MusicManager.instance.SetBossMusic();
+            canvas.enabled = true;
             curreState = TheAdversaryState.Init;  // Cambio secuencial automático de estado
             isInitFinish = true;
             GetComponent<BoxCollider2D>().isTrigger = false;
@@ -226,6 +235,7 @@ public class TheAdversaryController : MonoBehaviour
         if (collision.CompareTag("Sword") || collision.CompareTag("Bullet"))
         {
             life--;
+            healthBar.fillAmount = (float)life / lifeMax;
             if (life <= 0)
             {
                 // SECUENCIA ORDENADA DE MUERTE DEL JEFE
@@ -234,9 +244,9 @@ public class TheAdversaryController : MonoBehaviour
                 GetComponent<BoxCollider2D>().isTrigger = true;
                 curreState = TheAdversaryState.Dead;
                 animator.SetBool("isDeath", true);
-                
+
                 // Llamar a setDead para manejar la lógica post-muerte
-                setDead(); 
+                setDead();
             } // Cierra if (life <= 0)
         } // Cierra if (collision.CompareTag("Sword") || collision.CompareTag("Bullet"))
 

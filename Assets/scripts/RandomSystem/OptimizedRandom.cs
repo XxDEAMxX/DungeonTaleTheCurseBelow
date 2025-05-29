@@ -86,7 +86,7 @@ public class OptimizedRandom : MonoBehaviour
         // Añadir pools predeterminados si la lista está vacía en tiempo de ejecución
         if (pools.Count == 0)
         {
-            Debug.LogWarning("La lista de pools en OptimizedRandom está vacía. Añadiendo pools predeterminados en tiempo de ejecución. Por favor, configure los pools en el Inspector para un control más preciso.");
+            // Debug.LogWarning("La lista de pools en OptimizedRandom está vacía. Añadiendo pools predeterminados en tiempo de ejecución. Por favor, configure los pools en el Inspector para un control más preciso.");
             pools.Add(new RandomPool { poolName = "General", size = 2000 });
             pools.Add(new RandomPool { poolName = "Combat", size = 5000 });
             pools.Add(new RandomPool { poolName = "Loot", size = 3000 });
