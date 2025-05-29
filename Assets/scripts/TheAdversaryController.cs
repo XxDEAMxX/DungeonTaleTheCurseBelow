@@ -223,21 +223,27 @@ public class TheAdversaryController : MonoBehaviour
             if (life <= 0)
             {
                 // SECUENCIA ORDENADA DE MUERTE DEL JEFE
-                transform.rotation = Quaternion.Euler(0, 0, 0);     // 1. Resetear rotación
-                rb.linearVelocity = Vector2.zero;                   // 2. Detener movimiento
-                GetComponent<BoxCollider2D>().isTrigger = true;     // 3. Cambiar colisión
-                curreState = TheAdversaryState.Dead;                // 4. Estado de muerte
-                animator.SetBool("isDeath", true);                  // 5. Animación de muerte
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+                rb.linearVelocity = Vector2.zero;
+                GetComponent<BoxCollider2D>().isTrigger = true;
+                curreState = TheAdversaryState.Dead;
+                animator.SetBool("isDeath", true);
                 
-                // SECUENCIA DE EVENTOS DE VICTORIA            }
-        }
+                // Llamar a setDead para manejar la lógica post-muerte
+                setDead(); 
+            } // Cierra if (life <= 0)
+        } // Cierra if (collision.CompareTag("Sword") || collision.CompareTag("Bullet"))
+
         if (collision.CompareTag("BombRange"))
         {
             curreState = TheAdversaryState.Dead;
             animator.SetBool("isDeath", true);
+            // Llamar a setDead también si muere por bomba
+            setDead(); 
         }
-    }
+    } // Cierra OnTriggerEnter2D
 
+    // El método setDead debe comenzar en una nueva línea
     public void setDead()
     {
         animator.SetBool("isDead", true);
@@ -251,7 +257,7 @@ public class TheAdversaryController : MonoBehaviour
             Debug.LogError("GameManager.instance no está asignado en TheAdversaryController. No se puede llamar a WinGame().");
         }
                 
-                // SECUENCIA DE DESACTIVACIÓN DEL JUGADOR
+        // SECUENCIA DE DESACTIVACIÓN DEL JUGADOR
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
         {
@@ -261,7 +267,9 @@ public class TheAdversaryController : MonoBehaviour
         {
             Debug.LogWarning("No se encontró ningún GameObject con la etiqueta 'Player' para desactivar.");
         }
-    }    // MANEJO SECUENCIAL DE COLISIÓN Y DAÑO AL JUGADOR
+    }
+    
+    // MANEJO SECUENCIAL DE COLISIÓN Y DAÑO AL JUGADOR
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player") && canDealDamage)
@@ -289,9 +297,10 @@ public class TheAdversaryController : MonoBehaviour
             {
                 GameManager.instance.DecreaseLife(direction);
                 lastDamageTime = Time.time;
-            }
-        }
-    }    // COOLDOWN SECUENCIAL TEMPORAL PARA PREVENIR SPAM DE DAÑO
+            }        }
+    }
+    
+    // COOLDOWN SECUENCIAL TEMPORAL PARA PREVENIR SPAM DE DAÑO
     private IEnumerator DamageCooldown()
     {
         // PASO 1: Bloquear capacidad de hacer daño
@@ -305,15 +314,15 @@ public class TheAdversaryController : MonoBehaviour
     }
 
     private void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
+    {        if (other.gameObject.CompareTag("Player"))
         {
             isTouchingPlayer = false;
             damageTimer = 0f;
         }
     }
-      // SECUENCIA FINAL DE MUERTE Y LIMPIEZA
-    void Death()
+    
+    // SECUENCIA FINAL DE MUERTE Y LIMPIEZA
+    private void Death()
     {
         // PASO 1: Iniciar transición de sala
         RoomController.instance.StartCoroutine(RoomController.instance.RoomCoroutine());
