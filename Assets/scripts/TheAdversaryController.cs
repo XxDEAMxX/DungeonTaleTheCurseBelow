@@ -46,6 +46,7 @@ public class TheAdversaryController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        GetComponent<BoxCollider2D>().isTrigger = true;
         life = 2;
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -59,8 +60,10 @@ public class TheAdversaryController : MonoBehaviour
 
         if (!isInitFinish && notInRoom)
         {
+            MusicManager.instance.SetBossMusic();
             curreState = TheAdversaryState.Init;
             isInitFinish = true;
+            GetComponent<BoxCollider2D>().isTrigger = false;
         }
 
         switch (curreState)
@@ -207,25 +210,7 @@ public class TheAdversaryController : MonoBehaviour
                 GetComponent<BoxCollider2D>().isTrigger = true;
                 curreState = TheAdversaryState.Dead;
                 animator.SetBool("isDeath", true);
-                if (GameManager.instance != null)
-                {
-                    GameManager.instance.WinGame();
-                }
-                else
-                {
-                    Debug.LogError("GameManager.instance no está asignado en TheAdversaryController. No se puede llamar a WinGame().");
-                }
-                GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
-                if (playerObject != null)
-                {
-                    playerObject.SetActive(false);
-                }
-                else
-                {
-                    Debug.LogWarning("No se encontró ningún GameObject con la etiqueta 'Player' para desactivar.");
-                }
             }
-
         }
         if (collision.CompareTag("BombRange"))
         {
@@ -235,8 +220,26 @@ public class TheAdversaryController : MonoBehaviour
     }
 
     public void setDead()
-    { 
+    {
         animator.SetBool("isDead", true);
+        if (GameManager.instance != null)
+        {
+            Debug.Log("Llamando a WinGame() desde TheAdversaryController.");
+            GameManager.instance.WinGame();
+        }
+        else
+        {
+            Debug.LogError("GameManager.instance no está asignado en TheAdversaryController. No se puede llamar a WinGame().");
+        }
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null)
+        {
+            playerObject.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró ningún GameObject con la etiqueta 'Player' para desactivar.");
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)

@@ -61,6 +61,7 @@ public class RoomController : MonoBehaviour{
 
         canvasGroup.alpha = 0f;
         load.SetActive(false); 
+        MusicManager.instance.Init();
     }
 
 
@@ -192,7 +193,6 @@ public class RoomController : MonoBehaviour{
             if (boss != null)
             {
                 boss.notInRoom = true;
-                MusicManager.instance.isBossMusic = true;
                 // foreach (Door door in room.GetComponentsInChildren<Door>())
                 // {
                 //     door.doorCollider.SetActive(true);

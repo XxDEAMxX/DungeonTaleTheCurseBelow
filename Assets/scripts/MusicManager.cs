@@ -7,93 +7,61 @@ public enum MusicType { Boss, Main };
 public class MusicManager : MonoBehaviour
 {
     public static MusicManager instance;
-    private void Awake()
+    void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject); // <-- Esto mantiene el objeto entre escenas
         }
         else
         {
             Destroy(gameObject);
         }
     }
-
-    IEnumerator Del()
-    {
-        yield return new WaitForSeconds(3f);
-        restart();
-        audioSource.Play();
-    }
-
     public AudioSource audioSource;
     public AudioClip main;
     public AudioClip boss;
     public AudioClip victory;
-
     public static MusicType type;
     public static MusicType Type { get => type; set => type = value; }
-    public bool isBossMusic = false;
-
+    private AudioClip currentClip = null;
     void Start()
     {
-        if (!isBossMusic)
-        {
-            CambiarMusica(main);
-        }
-        else
-        {
-            CambiarMusica(boss);
-        }
     }
-
     public void Init()
     {
-        StartCoroutine(Del());
+        restart();
+        audioSource.Play();
     }
-
-
     public void Stop()
     {
         audioSource.Stop();
     }
-
-    void Update()
+    public void SetBossMusic()
     {
-        if (isBossMusic)
-        {
-            CambiarMusica(boss);
-        }
-        else
-        {
-            CambiarMusica(main);
-        }
+        CambiarMusica(boss);
     }
-
-    public void CambiarMusica(AudioClip nuevaMusica)
+    public void SetMainMusic()
     {
-        if (audioSource.clip == nuevaMusica) return;
-
-        audioSource.clip = nuevaMusica;
-        audioSource.loop = true;
-        audioSource.Play();
+        CambiarMusica(main);
     }
-
     public void VictoryMusic()
     {
         CambiarMusica(victory);
     }
-
+    public void CambiarMusica(AudioClip nuevaMusica)
+    {
+        if (audioSource.clip == nuevaMusica) return;
+        audioSource.Stop();
+        audioSource.clip = nuevaMusica;
+        audioSource.loop = true;
+        audioSource.Play();
+        currentClip = nuevaMusica;
+        Debug.Log(currentClip);
+    }
     public void restart()
     {
-        if (!isBossMusic)
-        {
-            CambiarMusica(main);
-        }
-        else
-        {
-            CambiarMusica(boss);
-        }
+        SetMainMusic();
     }
 }
