@@ -5,26 +5,39 @@ using System.Collections;
 
 public class MenuInit : MonoBehaviour
 {
-    private GameObject tran;
-    private Image tranImage;
+    [SerializeField] private Image tranImage; // Asigna esto en el inspector
+
+    [SerializeField] private float fadeDuration = 1f;
 
     private void Start()
     {
-        // Encuentra el panel por tag y obtiene el componente Image
-        tran = GameObject.FindGameObjectWithTag("Tran");
-        tran.SetActive(false);
-        if (tran != null)
+        // Si no está asignado por Inspector, intenta buscarla por tag
+        if (tranImage == null)
         {
-            tranImage = tran.GetComponent<Image>();
+            GameObject tran = GameObject.FindGameObjectWithTag("Tran");
+            if (tran != null)
+            {
+                tranImage = tran.GetComponent<Image>();
+            }
+        }
+
+        if (tranImage != null)
+        {
+            // Asegura que arranca transparente
+            Color color = tranImage.color;
+            color.a = 0f;
+            tranImage.color = color;
+            tranImage.gameObject.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("tranImage no asignado. Se cargará la escena sin transición.");
         }
     }
 
     public void Play()
     {
-        // Inicia la transición
-        tran.SetActive(true);
-        StartCoroutine(FadeToBlackAndLoadScene());
-        GameManager.instance.ResetState();
+        SceneManager.LoadScene(1);
     }
 
     public void Exit()
@@ -35,29 +48,21 @@ public class MenuInit : MonoBehaviour
 
     private IEnumerator FadeToBlackAndLoadScene()
     {
-        float duration = 1f; // duración del fade
-        float elapsed = 0f;
-
-        Color color = tranImage.color;
-        color.a = 0f;
-        tranImage.color = color;
-
-        // Asegúrate de que el panel esté activo
         tranImage.gameObject.SetActive(true);
 
-        // Hacer el fade a negro
-        while (elapsed < duration)
+        float elapsed = 0f;
+        Color color = tranImage.color;
+
+        while (elapsed < fadeDuration)
         {
             elapsed += Time.deltaTime;
-            color.a = Mathf.Clamp01(elapsed / duration);
+            color.a = Mathf.Clamp01(elapsed / fadeDuration);
             tranImage.color = color;
             yield return null;
         }
 
-        // Esperar un pequeño tiempo si quieres
         yield return new WaitForSeconds(0.1f);
 
-        // Cargar la siguiente escena
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
     }
 }
