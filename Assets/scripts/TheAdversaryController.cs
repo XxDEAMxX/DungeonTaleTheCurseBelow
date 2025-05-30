@@ -18,6 +18,9 @@ public class TheAdversaryController : MonoBehaviour
     void Awake() {
             instance = this;
     } 
+    public AudioClip damageSound; // Sonido cuando el adversario recibe daño
+    public AudioClip appearanceSound; // Sonido cuando el jefe aparece
+    public float soundVolume = 1.0f; // Variable para controlar el volumen de los sonidos del jefe
     private int life;
     private int lifeMax;
     private Animator animator;
@@ -79,6 +82,9 @@ public class TheAdversaryController : MonoBehaviour
             curreState = TheAdversaryState.Init;  // Cambio secuencial automático de estado
             isInitFinish = true;
             GetComponent<BoxCollider2D>().isTrigger = false;
+
+            // Iniciar corrutina para reproducir sonido de aparición con retraso
+            // (La llamada a PlayAppearanceSoundWithDelay se movió a Init() o se maneja de otra forma según el código actual)
         }
 
         // MÁQUINA DE ESTADOS SECUENCIAL: Procesamiento ordenado de comportamientos
@@ -100,6 +106,17 @@ public class TheAdversaryController : MonoBehaviour
             case TheAdversaryState.GenerateChild:
                 stop();           // Estado especial - generación de enemigos hijo
                 break;
+        }
+    }
+
+    // Corrutina para reproducir el sonido de aparición con un retraso
+    public void PlayAppearanceSoundWithDelay() // Asumo que quieres mantener el retraso si se llama desde otro sitio, o ajustar según necesidad
+    {
+        if (appearanceSound != null)
+        {
+            // Si quieres un retraso aquí, necesitarías StartCoroutine(PlayAppearanceSoundCoroutine(1.0f));
+            // Por ahora, lo reproduciré inmediatamente como estaba en tu código, pero con volumen ajustable.
+            AudioSource.PlayClipAtPoint(appearanceSound, transform.position, soundVolume);
         }
     }
 
@@ -205,10 +222,25 @@ public class TheAdversaryController : MonoBehaviour
         animator.SetBool("isAttack", false);
         animator.SetBool("isGenerateChild", false);
 
+        // Reproducir sonido de aparición aquí, ya que Init es donde realmente "aparece" lógicamente
+        if (appearanceSound != null && !hasStartedChildGeneration) 
+        {
+            StartCoroutine(DelayedAppearanceSound(1.0f)); // Retraso de 1 segundo
+        }
+
         if (!hasStartedChildGeneration)
         {
             StartCoroutine(EnqueueChildGeneration());
             hasStartedChildGeneration = true;
+        }
+    }
+
+    IEnumerator DelayedAppearanceSound(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (appearanceSound != null)
+        {
+            AudioSource.PlayClipAtPoint(appearanceSound, transform.position, soundVolume);
         }
     }
 
@@ -235,6 +267,13 @@ public class TheAdversaryController : MonoBehaviour
         {
             life--;
             healthBar.fillAmount = (float)life / lifeMax;
+
+            // Reproducir sonido de daño si está asignado
+            if (damageSound != null)
+            {
+                AudioSource.PlayClipAtPoint(damageSound, transform.position, soundVolume);
+            }
+
             if (life <= 0)
             {
                 // SECUENCIA ORDENADA DE MUERTE DEL JEFE
