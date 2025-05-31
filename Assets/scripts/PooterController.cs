@@ -56,11 +56,17 @@ public class PooterController : MonoBehaviour
             life--;
             if (life <= 0)
             {
-            animator.SetBool("isDeth", true);
+                animator.SetBool("isDeth", true);
             }
 
-            
+
         }  
+        
+         if (collision.CompareTag("BombRange"))
+        {
+            life = 0; // Matar al Pooter
+            animator.SetBool("isDeth", true);
+        }
     }
 
     void OnDestroy()

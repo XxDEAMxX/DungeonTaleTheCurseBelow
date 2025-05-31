@@ -229,10 +229,15 @@ public class Enemy : MonoBehaviour
         if (collision.CompareTag("BombRange"))
         {
             // Considera añadir sonido de daño por bomba aquí si es necesario
-            curreState = EnemyState.Dead;   
-            animator.SetBool("BlDeath", true); // Asegúrate que "BlDeath" sea el parámetro correcto
-            // Aquí también podrías necesitar lógica de RoomController y Destroy(gameObject)
-            // similar a la de arriba, dependiendo del comportamiento deseado.
+            life = 0; // Ajusta el daño según sea necesario
+            GetComponent<BoxCollider2D>().isTrigger = true;
+            curreState = EnemyState.Dead;
+            animator.SetBool("BlDeath", true); // Asegúrate que "BlDeath" sea el parámetro correcto en tu Animator
+            if (enemyType == EnemyType.Ranged) // Considera si esta lógica también aplica a Melee o necesita ajustarse
+            {
+                RoomController.instance.StartCoroutine(RoomController.instance.RoomCoroutine());
+                Destroy(gameObject);
+            }
         }
     }
 
