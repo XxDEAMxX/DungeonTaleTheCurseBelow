@@ -204,7 +204,7 @@ MonoBehaviour:
   range: 5
   speed: 0
   notInRoom: 0
-  damageSound: {fileID: 8300000, guid: 3f04c4f3c0d3f8c4d9b910d9433dc9d0, type: 3}
+  damageSound: {fileID: 8300000, guid: e81ffa0a737d3f14bbe9d492cb24d053, type: 3}
 --- !u!82 &6540930808336888889
 AudioSource:
   m_ObjectHideFlags: 0

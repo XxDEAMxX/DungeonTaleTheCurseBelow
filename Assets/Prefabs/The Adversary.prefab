@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c88c93df776c434daaaa2acb2ea2b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageSound: {fileID: 0}
+  damageSound: {fileID: 8300000, guid: babca41b19fa9a84a8f0b6ff737ad3ec, type: 3}
   appearanceSound: {fileID: 8300000, guid: e4d3c9cddcfbee2458748c4225c41d11, type: 3}
   soundVolume: 1
   speed: 6

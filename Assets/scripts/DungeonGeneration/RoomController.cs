@@ -75,26 +75,29 @@ public class RoomController : MonoBehaviour{
             return;
         }
         if (loadRoomQueue.Count == 0) {
-    if(!spawnedBossRoom){
-        StartCoroutine(SpawnBossRoom());
-    }
-    else if (spawnedBossRoom && bossRoomLoaded && !updatedRooms && !isLoadingRoom) {
-        foreach (Room room in loadedRooms) {
-            room.RemoveUnconnectedDoors();
+          if(!spawnedBossRoom){
+              StartCoroutine(SpawnBossRoom());
+          }
+          else if (spawnedBossRoom && bossRoomLoaded && !updatedRooms && !isLoadingRoom) {
+            foreach (Room room in loadedRooms) {
+              room.RemoveUnconnectedDoors();
+            }
+            UpdateRooms();
+            updatedRooms = true;
+            FadeOutAndDisable();
+            Debug.Log("RemoveUnconnectedDoors ejecutado en todas las habitaciones, incluyendo la del jefe.");
+          }
+          return;
         }
-        UpdateRooms();
-        updatedRooms = true;
-        FadeOutAndDisable();
-        Debug.Log("RemoveUnconnectedDoors ejecutado en todas las habitaciones, incluyendo la del jefe.");
-    }
-    return;
-}
         currentLoadRoomData = loadRoomQueue.Dequeue();
         isLoadingRoom = true;
         StartCoroutine(LoadRoomCoroutine(currentLoadRoomData));
-    }    IEnumerator SpawnBossRoom()
+    }    
+    
+    
+    IEnumerator SpawnBossRoom()
     {
-        spawnedBossRoom = true;
+        spawnedBossRoom = true; 
         yield return new WaitForSeconds(0.5f);
         if(loadRoomQueue.Count == 0)
         {
