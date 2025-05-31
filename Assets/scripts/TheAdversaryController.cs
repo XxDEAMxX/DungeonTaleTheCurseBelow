@@ -291,6 +291,7 @@ public class TheAdversaryController : MonoBehaviour
         if (collision.CompareTag("BombRange"))
         {
             life = life - 20;
+            healthBar.fillAmount = (float)life / lifeMax;
             if (life < 0)
             {
                 life = 0;
