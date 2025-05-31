@@ -290,10 +290,23 @@ public class TheAdversaryController : MonoBehaviour
 
         if (collision.CompareTag("BombRange"))
         {
-            curreState = TheAdversaryState.Dead;
-            animator.SetBool("isDeath", true);
-            // Llamar a setDead también si muere por bomba
-            setDead(); 
+            life = life - 20;
+            if (life < 0)
+            {
+                life = 0;
+            }
+            if (life <= 0)
+            {
+                // SECUENCIA ORDENADA DE MUERTE DEL JEFE
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+                rb.linearVelocity = Vector2.zero;
+                GetComponent<BoxCollider2D>().isTrigger = true;
+                curreState = TheAdversaryState.Dead;
+                animator.SetBool("isDeath", true);
+
+                // Llamar a setDead para manejar la lógica post-muerte
+                setDead();
+            }
         }
     } // Cierra OnTriggerEnter2D
 

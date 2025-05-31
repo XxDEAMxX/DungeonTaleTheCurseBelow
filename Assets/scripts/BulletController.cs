@@ -137,6 +137,14 @@ public class BulletController : MonoBehaviour
 
             GameManager.instance.DecreaseLife(direction);
         }
+        if (collision.CompareTag("Wall"))
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            GetComponent<Collider2D>().enabled = false;
+            animator.SetBool("isDeath", true);
+            animator.SetBool("isDeath", true);
+        }
     }
 
     void OnDestroy()
